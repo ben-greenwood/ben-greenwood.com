@@ -7,6 +7,7 @@ const ExternalLink = ({ url, text }) => {
     color: "#f97516",
     show: true,
     animate: false,
+    multiline: true,
   }
 
   return (
