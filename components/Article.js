@@ -1,12 +1,12 @@
 import Image from "next/image"
 
 
-const Article = ({ img, title, url }) => {
+const Article = ({ img, title, url, className }) => {
   new URL(url);
   const urlHost = new URL(url).hostname
   
   return (
-    <a href={url} className="group bg-gray-100 rounded-lg overflow-hidden flex flex-col">
+    <a href={url} className={className + " " + "group bg-gray-100 rounded-lg overflow-hidden flex flex-col"}>
       <div className="w-full aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8">
         <img src={img} alt={title} className="w-full h-32 object-center object-cover group-hover:opacity-75" />
       </div>
