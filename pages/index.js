@@ -6,7 +6,7 @@ import ReccomendedReading from '../components/Home/ReccomendedReading'
 
 export default function Home() {
   return (
-    <div className="">
+    <div id="root">
       <Head>
         <title>Ben Greenwood</title>
         <meta

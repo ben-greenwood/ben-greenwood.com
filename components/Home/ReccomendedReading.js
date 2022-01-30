@@ -1,9 +1,11 @@
 import Article from "../Article"
 import { RoughNotation } from "react-rough-notation"
 import useWindowSize from '../../utils/hooks/UseWindowSize'
+import useDarkMode from '../../utils/hooks/UseDarkMode'
 
 const ReccomendedReading = () => {
   const size = useWindowSize();
+  const darkModeEnabled = useDarkMode();
 
   const articles = [
     {
@@ -27,13 +29,12 @@ const ReccomendedReading = () => {
   ]
   
   return (
-    <div className="relative">
+    <div className="relative prose dark:prose-invert prose-orange dark:prose-orange prose-a:no-underline">
       <h5 className="flex items-center font-medium mb-4">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 mr-2 fill-current text-gray-800"
+          className="h-5 w-5 mr-2 fill-current"
           viewBox="0 0 20 20"
-          fill="currentColor"
         >
           <path d="M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z" />
         </svg>
@@ -42,7 +43,7 @@ const ReccomendedReading = () => {
       <div className="handwriting absolute -top-16 md:-top-20 right-4 sm:right-8 lg:right-0 transform rotate-3">
         <RoughNotation
           type="circle"
-          color="#000"
+          color={darkModeEnabled ? '#e5e7eb' : '#000'}
           show
           padding={size.width <= 768 ? [10, 20] : [20, 30]}
           strokeWidth={2}
@@ -57,7 +58,7 @@ const ReccomendedReading = () => {
         >
           <g
             fill="none"
-            stroke="#000"
+            stroke="currentColor"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
