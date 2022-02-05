@@ -14,13 +14,12 @@ const Bio = () => (
       design and run Product Design Sprints for several projects during my time
       there.
     </p>
-
     <p>
       I enjoy writing code, but my passion is in building useful products. I
       love sweating the details of a design and making each interaction as
       smooth and effortless as can be.
     </p>
-    <div className="grid grid-cols-2">
+    <div className="hidden grid-cols-2 sm:grid">
       <div>
         <h5 className="flex items-center font-medium">
           <svg
