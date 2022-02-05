@@ -1,4 +1,4 @@
-import { RoughNotation } from "react-rough-notation";
+import { RoughNotation } from "react-rough-notation"
 
 const ExternalLink = ({ url, text }) => {
   const roughNotationUnderlineProps = {
@@ -12,9 +12,11 @@ const ExternalLink = ({ url, text }) => {
 
   return (
     <RoughNotation {...roughNotationUnderlineProps}>
-      <a href={url} target="_blank" rel="noreferrer">{text}</a>
+      <a href={url} target="_blank" rel="noreferrer">
+        {text}
+      </a>
     </RoughNotation>
-  );
+  )
 }
 
-export default ExternalLink;
+export default ExternalLink

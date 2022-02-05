@@ -6,12 +6,11 @@ const Header = () => (
           Ben Greenwood
         </h1>
         <h2 className="text-base font-semibold md:text-lg text-slate-700 dark:text-slate-300">
-          Full Stack Product Engineer
+          Product Engineer
         </h2>
       </div>
-
     </div>
   </div>
-);
+)
 
-export default Header;
+export default Header

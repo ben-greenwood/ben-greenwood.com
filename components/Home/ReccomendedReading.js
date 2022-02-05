@@ -1,37 +1,37 @@
 import Article from "../Article"
 import { RoughNotation } from "react-rough-notation"
-import useWindowSize from '../../utils/hooks/UseWindowSize'
+import useWindowSize from "../../utils/hooks/UseWindowSize"
 
 const ReccomendedReading = () => {
-  const size = useWindowSize();
+  const size = useWindowSize()
 
   const articles = [
+    {
+      reccomended: true,
+      img: "https://moxie.org/blog/images/nft-opensea.png",
+      title: "My first impressions of web3",
+      url: "https://moxie.org/2022/01/07/web3-first-impressions.html",
+    },
     {
       reccomended: false,
       img: "https://images.unsplash.com/photo-1593697972361-20049710acb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2966&q=80",
       title: "The Decision-Making Pendulum",
-      url: "https://candost.blog/the-decision-making-pendulum"
-    },
-    {
-      reccomended: true,
-      img: "https://images.unsplash.com/photo-1640231912426-0d5feab0b9f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1200&q=80",
-      title: "My first impressions of web3",
-      url: "https://moxie.org/2022/01/07/web3-first-impressions.html"
+      url: "https://candost.blog/the-decision-making-pendulum",
     },
     {
       reccomended: false,
       img: "https://imagedelivery.net/cCutpQSrpIaP0yEOiL1OGw/2daf6335-357d-44a5-d9c2-0b8b0e4cbf00/fullsize",
       title: "How my website works",
-      url: "https://brianlovin.com/writing/how-my-website-works"
+      url: "https://brianlovin.com/writing/how-my-website-works",
     },
   ]
-  
+
   return (
     <div className="relative">
-      <h5 className="flex items-center font-medium mb-4">
+      <h5 className="mb-4 flex items-center font-medium">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 mr-2 fill-current text-gray-800"
+          className="mr-2 h-5 w-5 fill-current text-gray-800"
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -39,7 +39,7 @@ const ReccomendedReading = () => {
         </svg>
         Interesting reads...
       </h5>
-      <div className="handwriting absolute -top-16 md:-top-20 right-4 sm:right-8 lg:right-0 transform rotate-3">
+      <div className="handwriting absolute -top-16 right-4 rotate-3 transform sm:right-8 md:-top-20 lg:right-0">
         <RoughNotation
           type="circle"
           color="#000"
@@ -50,7 +50,7 @@ const ReccomendedReading = () => {
           <span className="handwriting text-lg md:text-xl">Reccomended</span>
         </RoughNotation>
         <svg
-          className="transform rotate-180 mt-6"
+          className="mt-6 rotate-180 transform"
           xmlns="http://www.w3.org/2000/svg"
           width="85"
           height="50"
@@ -68,10 +68,16 @@ const ReccomendedReading = () => {
           </g>
         </svg>
       </div>
-      <div className="grid grid-cols-1 gap-y-6 gap-x-6 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-1">
         {articles &&
           articles.map(({ img, url, title, reccomended }) => (
-            <Article key={title} img={img} title={title} url={url} className={reccomended ? 'order-1 sm:order-2' : 'order-2'} />
+            <Article
+              key={title}
+              img={img}
+              title={title}
+              url={url}
+              className={reccomended ? "order-1 sm:order-2" : "order-2"}
+            />
           ))}
       </div>
     </div>
