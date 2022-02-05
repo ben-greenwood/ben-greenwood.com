@@ -15,7 +15,6 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 * {
@@ -30,4 +29,8 @@ h2 {
 .handwriting {
   font-family: "Indie Flower";
   font-weight: 600;
+}
+
+.wavy {
+  text-decoration-style: wavy;
 }
