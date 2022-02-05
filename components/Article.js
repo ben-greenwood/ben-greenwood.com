@@ -8,6 +8,8 @@ const Article = ({ img, title, url, className }) => {
   return (
     <a
       href={url}
+      target="_blank"
+      rel="noreferrer"
       className={classNames(
         { className },
         "group grid grid-cols-5 overflow-hidden rounded-md border border-gray-100 bg-white p-2 transition-transform duration-200 ease-in-out hover:scale-105"
