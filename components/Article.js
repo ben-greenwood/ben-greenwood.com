@@ -1,4 +1,3 @@
-import Image from "next/image"
 const classNames = require("classnames")
 
 const Article = ({ img, title, url, className }) => {

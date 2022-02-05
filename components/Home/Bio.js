@@ -1,7 +1,7 @@
 import ExternalLink from "../ExternalLink"
 
 const Bio = () => (
-  <div className="prose prose-orange max-w-none space-y-10 prose-a:no-underline dark:prose-invert dark:prose-orange">
+  <div className="prose prose-orange max-w-none space-y-10 dark:prose-invert dark:prose-orange">
     <p>
       I&apos;m a Product Engineer based in Bath UK, currently working at{" "}
       <ExternalLink url="https://appearhere.co.uk" text="Appear [ here ]" />,
