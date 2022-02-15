@@ -15,11 +15,30 @@ const Article = ({ img, title, url, className }) => {
       )}
     >
       <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full">
-        <img
-          src={img}
-          alt={title}
-          className="h-14 w-full overflow-hidden rounded-md object-cover object-center"
-        />
+        {img ? (
+          <img
+            src={img}
+            alt={title}
+            className="h-14 w-full overflow-hidden rounded-md object-cover object-center"
+          />
+        ) : (
+          <div className="flex h-full w-full items-center justify-center rounded-md bg-gray-100 text-gray-300">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+              />
+            </svg>
+          </div>
+        )}
       </div>
       <div className="col-span-4 ml-2 p-2">
         <h3 className="truncate text-sm font-medium text-gray-700">{title}</h3>
