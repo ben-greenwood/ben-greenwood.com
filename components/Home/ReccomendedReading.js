@@ -8,21 +8,21 @@ const ReccomendedReading = () => {
   const articles = [
     {
       reccomended: true,
+      img: "https://height-blog.ghost.io/content/images/2022/01/blog-post-contextMenu-1.png",
+      title:
+        "Building like it's 1984: A comprehensive guide to creating intuitive context menus",
+      url: "https://height.app/blog/guide-to-build-context-menus",
+    },
+    {
+      reccomended: false,
       img: "https://moxie.org/blog/images/nft-opensea.png",
       title: "My first impressions of web3",
       url: "https://moxie.org/2022/01/07/web3-first-impressions.html",
     },
     {
       reccomended: false,
-      img: "https://images.unsplash.com/photo-1593697972361-20049710acb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2966&q=80",
-      title: "The Decision-Making Pendulum",
-      url: "https://candost.blog/the-decision-making-pendulum",
-    },
-    {
-      reccomended: false,
-      img: "https://imagedelivery.net/cCutpQSrpIaP0yEOiL1OGw/2daf6335-357d-44a5-d9c2-0b8b0e4cbf00/fullsize",
-      title: "How my website works",
-      url: "https://brianlovin.com/writing/how-my-website-works",
+      title: "How does UTF-8 turn “😂” into “F09F9882”?",
+      url: "https://sethmlarson.dev/blog/utf-8",
     },
   ]
 
