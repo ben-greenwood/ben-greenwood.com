@@ -25,7 +25,7 @@ const Article = ({ img, title, url, className }) => {
           <div className="flex h-full w-full items-center justify-center rounded-md bg-gray-100 text-gray-300">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
+              className="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
