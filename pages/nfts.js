@@ -4,7 +4,7 @@ import cacheData from "memory-cache"
 
 import Footer from "../components/Footer"
 import Header from "../components/Home/Header"
-import EthButton from "../components/Nft/EthButton"
+import EthConnect from "../components/Nft/EthConnect"
 import NftGrid from "../components/Nft/NftGrid"
 import EthInput from "../components/Nft/EthInput"
 import Spinner from "../components/Spinner"
@@ -127,7 +127,7 @@ export default function Nfts() {
       <body className="min-h-screen dark:bg-slate-900">
         <main className="mx-auto flex max-w-7xl flex-col px-6">
           <Header title="NFTs" subTitle="View any wallet's NFT collection">
-            <EthButton
+            <EthConnect
               ethAddress={connectedEthAddress}
               setEthAddress={setConnectedEthAddress}
             />

@@ -12,7 +12,7 @@ const EthInput = (setEthInput, getNfts) => (
         <input
           type="text"
           // onChange={(e) => setEthInput(e.target.value)}
-          placeholder="0x6f2..."
+          placeholder="0x6f2...656b0"
           className="form-input mt-1 w-full rounded-md px-4 py-2"
         />
       </div>
