@@ -9,7 +9,7 @@ export default function Home({ books }) {
   return (
     <div className="">
       <Head>
-        <title>Ben Greenwood</title>
+        <title>BG - Home</title>
         <meta
           name="description"
           content="A place for my thoughts and experiences"
@@ -17,9 +17,9 @@ export default function Home({ books }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className="min-h-screen bg-white dark:bg-slate-900">
-        <main className="mx-auto flex max-w-7xl flex-col px-6">
-          <Header />
+      <body className="min-h-screen dark:bg-slate-900">
+        <main className="flex flex-col px-6 mx-auto max-w-7xl">
+          <Header title="Ben Greenwood" subTitle="Product Engineer"/>
           <div className="flex-grow gap-8 lg:grid lg:grid-cols-12">
             <div className="col-span-7 my-4 md:my-8">
               <Bio books={books} />
