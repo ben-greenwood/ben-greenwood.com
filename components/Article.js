@@ -1,6 +1,7 @@
 const classNames = require("classnames")
 import { motion } from "framer-motion"
 import { BookOpenIcon, ExternalLinkIcon } from "@heroicons/react/outline"
+import Image from "next/image"
 
 const Article = ({ img, title, url, className, index }) => {
   new URL(url)
@@ -17,9 +18,10 @@ const Article = ({ img, title, url, className, index }) => {
         "group grid grid-cols-5 overflow-hidden rounded-md border border-gray-100 bg-white p-2 transition-transform duration-200 ease-in-out hover:scale-105"
       )}
     >
-      <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full">
+      <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 relative w-full">
         {img ? (
-          <img
+          <Image
+            layout="fill"
             src={img}
             alt={title}
             className="h-14 w-full overflow-hidden rounded-md object-cover object-center"
