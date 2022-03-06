@@ -1,8 +1,9 @@
 import ExternalLink from "../ExternalLink"
-import { FireIcon, LightBulbIcon } from "@heroicons/react/solid"
+import { FireIcon, BookOpenIcon } from "@heroicons/react/outline"
+import Book from "../Book"
 
-const Bio = () => (
-  <div className="prose prose-orange dark:prose-invert dark:prose-orange max-w-none space-y-10">
+const Bio = ({ books }) => (
+  <div className="prose prose-orange dark:prose-invert dark:prose-orange max-w-none space-y-8 sm:space-y-10">
     <p>
       <span className="mr-1 text-lg">👋</span> I&apos;m a Product Engineer based
       in Bath UK, currently working at{" "}
@@ -20,28 +21,31 @@ const Bio = () => (
       love sweating the details of a design and making each interaction as
       smooth and effortless as possible.
     </p>
-    <div className="hidden grid-cols-2 sm:grid">
-      <div>
-        <h5 className="flex items-center font-medium">
-          <FireIcon className="mr-2 h-5 w-5" />
+    <div className="grid-cols-2 sm:grid">
+      <div className="hidden sm:block">
+        <h5 className="mb-3 flex items-center font-medium">
+          <FireIcon className="mr-2 h-5 w-5 stroke-current" />
           Passionate about...
         </h5>
-        <ul className="space-y-1">
+        <ul className="space-y-1 text-sm">
           <li className="my-0 mt-2">Food</li>
           <li>Coffee</li>
           <li>Music</li>
           <li>Coding</li>
         </ul>
       </div>
-      <div>
-        <h5 className="flex items-center font-medium">
-          <LightBulbIcon className="mr-2 h-5 w-5" />
-          Curious about...
+      <div className="mt-4 sm:mt-0">
+        <h5 className="mb-3 flex items-center font-medium">
+          <BookOpenIcon className="mr-2 h-5 w-5 stroke-current" />
+          Currently reading...
         </h5>
-        <ul className="space-y-1">
-          <li className="my-0 mt-2">Crypto</li>
-          <li>NFTs</li>
-          <li>Web 3.0</li>
+        <ul className="space-y-1 text-sm">
+          {books &&
+            books.map((book, index) => (
+              <li key={index}>
+                <Book book={book} />
+              </li>
+            ))}
         </ul>
       </div>
     </div>
