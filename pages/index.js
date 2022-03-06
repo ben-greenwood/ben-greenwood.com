@@ -3,8 +3,9 @@ import Footer from "../components/Footer"
 import Header from "../components/Home/Header"
 import Bio from "../components/Home/Bio"
 import ReccomendedReading from "../components/Home/ReccomendedReading"
+import { getBooksFromOku } from "../lib/oku.js"
 
-export default function Home() {
+export default function Home({ books }) {
   return (
     <div className="">
       <Head>
@@ -21,9 +22,9 @@ export default function Home() {
           <Header />
           <div className="flex-grow gap-8 lg:grid lg:grid-cols-12">
             <div className="col-span-7 my-4 md:my-8">
-              <Bio />
+              <Bio books={books} />
             </div>
-            <div className="col-span-5 mt-8 border-t border-slate-100 pt-8 lg:mt-0 lg:border-0 lg:pl-8">
+            <div className="col-span-5 mt-9 border-t border-slate-100 pt-8 pb-4 lg:mt-0 lg:border-0 lg:pl-8">
               <div className="space-y-8">
                 <ReccomendedReading />
               </div>
@@ -34,4 +35,10 @@ export default function Home() {
       </body>
     </div>
   )
+}
+
+export async function getStaticProps(context) {
+  const { books } = await getBooksFromOku()
+
+  return { props: { books } }
 }

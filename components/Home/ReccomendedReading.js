@@ -1,5 +1,5 @@
 import Article from "../Article"
-import { BookmarkIcon } from "@heroicons/react/solid"
+import { BookmarkIcon } from "@heroicons/react/outline"
 import ReccomendedTextBubble from "./ReccomendedTextBubble"
 
 const ReccomendedReading = () => {
@@ -26,8 +26,8 @@ const ReccomendedReading = () => {
 
   return (
     <div className="relative">
-      <h5 className="mb-4 flex items-center font-medium">
-        <BookmarkIcon className="mr-2 h-5 w-5 fill-current text-gray-800" />
+      <h5 className="mb-4 flex items-center font-medium text-gray-700">
+        <BookmarkIcon className="stroke-curren mr-2 h-5 w-5" />
         Interesting reads...
       </h5>
       <ReccomendedTextBubble />
