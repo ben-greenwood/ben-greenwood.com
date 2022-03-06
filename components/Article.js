@@ -9,7 +9,7 @@ const Article = ({ img, title, url, className, index }) => {
   return (
     <motion.a
       animate={{ opacity: [0, 1] }}
-      transition={{ delay: index * 0.25 }}
+      transition={{ delay: index * 0.15 }}
       href={url}
       target="_blank"
       rel="noreferrer"
