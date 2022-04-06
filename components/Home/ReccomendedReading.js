@@ -6,6 +6,12 @@ const ReccomendedReading = () => {
   const articles = [
     {
       reccomended: true,
+      img: "https://uploads-ssl.webflow.com/618bc2e78ccacb31ced8ffbd/618bc4c1edd4acdb2c75466f_PragmaticEngineerNewsletterLogo-p-1080.png",
+      title: "Migrations Done Well: Executing Migrations",
+      url: "https://blog.pragmaticengineer.com/migrations-done-well-executing-them/",
+    },
+    {
+      reccomended: false,
       img: "https://height-blog.ghost.io/content/images/2022/01/blog-post-contextMenu-1.png",
       title:
         "Building like it's 1984: A comprehensive guide to creating intuitive context menus",
@@ -13,14 +19,8 @@ const ReccomendedReading = () => {
     },
     {
       reccomended: false,
-      img: "https://moxie.org/blog/images/nft-opensea.png",
-      title: "My first impressions of web3",
-      url: "https://moxie.org/2022/01/07/web3-first-impressions.html",
-    },
-    {
-      reccomended: false,
-      title: "How does UTF-8 turn “😂” into “F09F9882”?",
-      url: "https://sethmlarson.dev/blog/utf-8",
+      title: "User Interface Gallery",
+      url: "https://ui.gallery/",
     },
   ]
 
