@@ -6,7 +6,7 @@ const ReccomendedReading = () => {
   const articles = [
     {
       reccomended: true,
-      img: "https://uploads-ssl.webflow.com/618bc2e78ccacb31ced8ffbd/618bc4c1edd4acdb2c75466f_PragmaticEngineerNewsletterLogo-p-1080.png",
+      img: "https://uploads-ssl.webflow.com/618bc2e78ccacb31ced8ffbd/618bc4c1edd4acdb2c75466f_PragmaticEngineerNewsletterLogo.png",
       title: "Migrations Done Well: Executing Migrations",
       url: "https://blog.pragmaticengineer.com/migrations-done-well-executing-them/",
     },
