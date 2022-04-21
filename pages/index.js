@@ -37,7 +37,7 @@ export default function Home({ books }) {
   )
 }
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const { books } = await getBooksFromOku()
 
   return { props: { books } }
