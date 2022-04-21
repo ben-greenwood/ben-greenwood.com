@@ -8,69 +8,19 @@ import EthConnect from "../components/Nft/EthConnect"
 import NftGrid from "../components/Nft/NftGrid"
 import EthInput from "../components/Nft/EthInput"
 import Spinner from "../components/Spinner"
+import useSWR from "swr"
+
+import { fetcher } from "../lib/utils"
 
 export default function Nfts() {
   const [connectedEthAddress, setConnectedEthAddress] = useState(null)
-  // const [nfts, setNfts] = useState(null)
+  const [nfts, setNfts] = useState([])
   const [loading, setLoading] = useState(null)
   const [ethInput, setEthInput] = useState(null)
 
-  const nfts = [
-    {
-      imageUrl:
-        "https://lh3.googleusercontent.com/l0OwzHOTRhgsZJYjDRTXbx5-EBSYPag9i2SFCob9BbgEWBubjBeg2cv8Kp3xJxMWKq0edzGbVDTwEcL76sfbuxTzUM3qVYJTZGaclw=s600",
-      name: "Pidgies #2736",
-      price: 0.03,
-    },
-    {
-      imageUrl:
-        "https://lh3.googleusercontent.com/9MPgcPTkKRVFY6FXkZ_X_3SIDxc2TdK11on0hqyc1TyWa2zHoeyRthNmI6UBit2C1hJhNtByD4MTPCWn1QXC7rhxD7k9freV9h6N=s600",
-      name: "Pidgies #5248",
-      price: 0.03,
-    },
-    {
-      imageUrl: "https://doodles.app/images/doodle_toast.png",
-      name: "Doodles #0001",
-      price: 12.35,
-    },
-    {
-      imageUrl: "https://doodles.app/images/doodle_poopie.png",
-      name: "Doodles #0002",
-      price: 12.35,
-    },
-    {
-      imageUrl: "https://doodles.app/images/doodle_evan.png",
-      name: "Doodles #0003",
-      price: 12.35,
-    },
-    {
-      imageUrl:
-        "https://s3.amazonaws.com/api.coolcatsnft.com/thumbnails/32_thumbnail.png",
-      name: "Cool Cats #32",
-      price: 100,
-    },
-    {
-      imageUrl:
-        "https://s3.amazonaws.com/api.coolcatsnft.com/thumbnails/0_thumbnail.png",
-      name: "Cool Cats #1",
-      price: 100,
-    },
-    {
-      imageUrl: "https://www.woodiesnft.com/api/collectible/image-2752",
-      name: "Woodies #2752",
-      price: 0.25,
-    },
-    {
-      imageUrl: "https://www.woodiesnft.com/api/collectible/image-2753",
-      name: "Woodies #2753",
-      price: 0.25,
-    },
-    {
-      imageUrl: "https://www.woodiesnft.com/api/collectible/image-2754",
-      name: "Woodies #2754",
-      price: 0.25,
-    },
-  ]
+  const { data, error } = useSWR("/api/opensea", fetcher)
+
+  console.log(data)
 
   // useEffect(() => {
   //   if (connectedEthAddress) {
@@ -81,39 +31,39 @@ export default function Nfts() {
   // }, [connectedEthAddress, ethInput])
 
   // const getNfts = async (address) => {
-  // if (!address) return
+  //   if (!address) return
 
-  // try {
-  //   const cachedNfts = cacheData.get(address)
-  //   if (cachedNfts) return setNfts(cachedNfts)
+  //   try {
+  //     const cachedNfts = cacheData.get(address)
+  //     if (cachedNfts) return setNfts(cachedNfts)
 
-  //   setLoading(true)
+  //     setLoading(true)
 
-  //   // `https://api.opensea.io/api/v1/assets?owner=${address}&order_direction=desc&offset=0&limit=20`,
-  //   const response = await fetch(
-  //     "https://api.opensea.io/api/v1/assets?order_by=pk&order_direction=desc&limit=20&offset=0"
-  //   )
+  //     // `https://api.opensea.io/api/v1/assets?owner=${address}&order_direction=desc&offset=0&limit=20`,
+  //     const response = await fetch(
+  //       "https://api.opensea.io/api/v1/assets?order_by=pk&order_direction=desc&limit=20&offset=0"
+  //     )
 
-  //   const data = await response.json()
-  //   console.log(data)
-  // } catch (error) {
-  //   console.error(error)
-  //   setLoading(false)
-  // }
+  //     const data = await response.json()
 
-  // fetch(
-  //   `https://api.opensea.io/api/v1/assets?owner=${address}&order_direction=desc&offset=0&limit=20`,
-  //   options
-  // )
-  //   .then((res) => res.json())
-  //   .then((data) => {
+  //     console.log(data)
+  //   } catch (error) {
+  //     console.error(error)
   //     setLoading(false)
-  //     cacheData.put(address, data.assets)
-  //     setNfts(data.assets)
-  //   })
-  //   .catch((e) => {
-  //
-  //   })
+  //   }
+
+  //   // fetch(
+  //   //   `https://api.opensea.io/api/v1/assets?owner=${address}&order_direction=desc&offset=0&limit=20`,
+  //   //   options
+  //   // )
+  //   //   .then((res) => res.json())
+  //   //   .then((data) => {
+  //   //     setLoading(false)
+  //   //     console.log(data)
+  //   //     cacheData.put(address, data.assets)
+  //   //     setNfts(data.assets)
+  //   //   })
+  //   //   .catch((e) => {})
   // }
 
   return (
