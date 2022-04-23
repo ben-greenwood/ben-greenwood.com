@@ -19,12 +19,12 @@ export default function Home({ books }) {
 
       <body className="min-h-screen bg-white dark:bg-slate-900">
         <main className="mx-auto flex max-w-7xl flex-col px-6">
-          <Header />
+          <Header title="Ben Greenwood" subtitle="Product Engineer" />
           <div className="flex-grow gap-8 lg:grid lg:grid-cols-12">
-            <div className="col-span-7 my-4 md:my-8">
+            <div className="col-span-7 mb-4 md:mb-8">
               <Bio books={books} />
             </div>
-            <div className="col-span-5 mt-9 border-t border-slate-100 pt-8 pb-4 lg:mt-0 lg:border-0 lg:pl-8">
+            <div className="col-span-5 mt-9 border-t border-slate-100 pt-8 lg:mt-0 lg:border-0 lg:pl-8">
               <div className="space-y-8">
                 <ReccomendedReading />
               </div>
