@@ -46,7 +46,7 @@ const GradientTile = ({ order }) => {
     },
   })
 
-  useEffect(async () => {
+  useEffect(() => {
     getWeather()
   }, [])
 

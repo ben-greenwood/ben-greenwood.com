@@ -9,7 +9,7 @@ const GiphyTile = ({ order }) => {
 
   const gf = new GiphyFetch("34OyQm40BJDu8YX8hoZdbUEeo17kVWbY")
 
-  useEffect(async () => {
+  useEffect(() => {
     getRandomGif()
   }, [])
 

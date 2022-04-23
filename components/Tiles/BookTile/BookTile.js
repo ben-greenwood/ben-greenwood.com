@@ -6,7 +6,7 @@ import { getBookReccomendationFromOku } from "../../../lib/oku.js"
 const BookTile = ({ order }) => {
   const [book, setBook] = useState({})
 
-  useEffect(async () => {
+  useEffect(() => {
     getRandomBook()
   }, [])
 

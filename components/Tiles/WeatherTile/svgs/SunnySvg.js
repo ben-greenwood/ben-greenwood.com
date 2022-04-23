@@ -31,7 +31,7 @@ const SunnySvg = ({ className }) => (
         <path
           fill="none"
           stroke="#fbbf24"
-          stroke-linecap="round"
+          strokeLinecap="round"
           strokeMiterlimit="10"
           strokeWidth="24"
           d="M192 61.7V12m0 360v-49.7m92.2-222.5 35-35M64.8 319.2l35.1-35.1m0-184.4-35-35m254.5 254.5-35.1-35.1M61.7 192H12m360 0h-49.7"
