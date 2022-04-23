@@ -1,9 +1,8 @@
 import { useState } from "react"
 import Tile from "../Tile"
 import RefreshButton from "../RefreshButton"
-import { motion, AnimatePresence } from "framer-motion"
 
-const GradientTile = ({}) => {
+const GradientTile = ({ order }) => {
   const gradients = [
     "linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)",
     "linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%)",
@@ -24,15 +23,7 @@ const GradientTile = ({}) => {
   }
 
   const displayChildren = (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="h-full w-full"
-        style={{ background: activeGradient }}
-      ></motion.div>
-    </AnimatePresence>
+    <div className="h-full w-full" style={{ background: activeGradient }}></div>
   )
 
   const controlChildren = (
@@ -43,7 +34,11 @@ const GradientTile = ({}) => {
   )
 
   return (
-    <Tile displayChildren={displayChildren} controlChildren={controlChildren} />
+    <Tile
+      displayChildren={displayChildren}
+      controlChildren={controlChildren}
+      order={order}
+    />
   )
 }
 

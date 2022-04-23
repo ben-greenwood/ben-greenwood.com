@@ -1,9 +1,8 @@
 import { useState } from "react"
 import Tile from "../Tile"
 import RefreshButton from "../RefreshButton"
-import { motion, AnimatePresence } from "framer-motion"
 
-const AsciiTile = ({}) => {
+const AsciiTile = ({ order }) => {
   const asciis = [
     "<^>(-_-)<^>    t(-_-t)    -_-*,,|,",
     "<^>(-_-)<^>    -_-*,,|,",
@@ -19,16 +18,9 @@ const AsciiTile = ({}) => {
   }
 
   const displayChildren = (
-    <AnimatePresence>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        className="flex h-full w-full items-center justify-center rounded-md border border-gray-200 bg-gray-100"
-      >
-        {activeAscii}
-      </motion.div>
-    </AnimatePresence>
+    <div className="flex h-full w-full items-center justify-center rounded-md border border-gray-200 bg-gray-100">
+      {activeAscii}
+    </div>
   )
 
   const controlChildren = (
@@ -39,7 +31,11 @@ const AsciiTile = ({}) => {
   )
 
   return (
-    <Tile displayChildren={displayChildren} controlChildren={controlChildren} />
+    <Tile
+      displayChildren={displayChildren}
+      controlChildren={controlChildren}
+      order={order}
+    />
   )
 }
 
