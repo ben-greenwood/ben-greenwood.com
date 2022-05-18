@@ -6,7 +6,6 @@ const ReccomendedReading = () => {
   const articles = [
     {
       reccomended: true,
-      img: "https://d24ovhgu8s7341.cloudfront.net/uploads/post/cover/2131/vibe-shift.jpg",
       title: "DALL·E 2 and The Origin of Vibe Shifts",
       url: "https://every.to/divinations/dall-e-2-and-the-origin-of-vibe-shifts",
     },
