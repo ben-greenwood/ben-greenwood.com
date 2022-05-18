@@ -6,9 +6,9 @@ const ReccomendedReading = () => {
   const articles = [
     {
       reccomended: true,
-      img: "https://uploads-ssl.webflow.com/618bc2e78ccacb31ced8ffbd/618bc4c1edd4acdb2c75466f_PragmaticEngineerNewsletterLogo.png",
-      title: "Migrations Done Well: Executing Migrations",
-      url: "https://blog.pragmaticengineer.com/migrations-done-well-executing-them/",
+      img: "https://d24ovhgu8s7341.cloudfront.net/uploads/post/cover/2131/vibe-shift.jpg",
+      title: "DALL·E 2 and The Origin of Vibe Shifts",
+      url: "https://every.to/divinations/dall-e-2-and-the-origin-of-vibe-shifts",
     },
     {
       reccomended: false,
