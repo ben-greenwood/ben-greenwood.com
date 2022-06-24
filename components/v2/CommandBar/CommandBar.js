@@ -52,10 +52,9 @@ const CommandBar = ({ children }) => {
     border: "none",
     background: "white",
     color: "black",
-    zIndex: "50",
   }
 
-  const portalStyle = {
+  const positionerStyle = {
     zIndex: "50",
   }
 
@@ -73,8 +72,8 @@ const CommandBar = ({ children }) => {
   return (
     <>
       <KBarProvider actions={actions}>
-        <KBarPortal style={portalStyle}>
-          <KBarPositioner>
+        <KBarPortal>
+          <KBarPositioner style={positionerStyle}>
             <KBarAnimator style={animatorStyle}>
               <KBarSearch style={searchStyle} />
               <CommandBarResults />

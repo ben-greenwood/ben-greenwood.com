@@ -29,7 +29,7 @@ const Bio = () => {
         onClick={query.toggle}
         className="group relative flex items-center justify-center px-4 py-2 hover:border-green-800"
       >
-        <div className="absolute h-full w-full animate-pulse rounded-lg border border-gray-900 px-4 py-2 group-hover:border-green-800"></div>
+        <div className="absolute h-full w-full animate-pulse rounded-lg border border-green-900 px-4 py-2 group-hover:border-green-800"></div>
         <div>
           Use <kbd className="rounded bg-gray-900 p-1 px-2 text-sm">⌘</kbd>{" "}
           <kbd className="rounded bg-gray-900 p-1 px-2 text-sm">K</kbd> to
