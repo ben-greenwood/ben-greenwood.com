@@ -1,6 +1,7 @@
-import Article from "../Article"
+import React from "react"
+import Article from "components/v1/Article"
 import { BookmarkIcon } from "@heroicons/react/outline"
-import ReccomendedTextBubble from "./ReccomendedTextBubble"
+import ReccomendedTextBubble from "components/v1/Home/ReccomendedTextBubble"
 
 const ReccomendedReading = () => {
   const articles = [

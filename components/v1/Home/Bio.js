@@ -1,6 +1,7 @@
-import ExternalLink from "../ExternalLink"
+import React from "react"
+import ExternalLink from "components/v1/ExternalLink"
 import { FireIcon, BookOpenIcon } from "@heroicons/react/outline"
-import Book from "../Book"
+import Book from "components/v1/Book"
 
 const Bio = ({ books }) => (
   <div className="prose prose-orange dark:prose-invert dark:prose-orange max-w-none space-y-8 sm:space-y-10">
