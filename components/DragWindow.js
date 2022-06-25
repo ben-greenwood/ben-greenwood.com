@@ -42,7 +42,7 @@ const DragWindow = ({ children }) => {
   }
   return (
     <motion.div
-      className={cx("relative z-10", {
+      className={cx("relative z-20", {
         ["transition-all duration-500 ease-in-out"]: !dragging,
       })}
       style={{ right: -rightPosition }}
