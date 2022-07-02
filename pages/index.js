@@ -1,3 +1,4 @@
+import React from "react"
 import Head from "next/head"
 import Footer from "../components/Footer"
 import Header from "../components/Home/Header"
@@ -37,7 +38,7 @@ export default function Home({ books }) {
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const { books } = await getBooksFromOku()
 
   return { props: { books } }
