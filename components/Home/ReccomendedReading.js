@@ -1,3 +1,4 @@
+import React from "react"
 import Article from "../Article"
 import { BookmarkIcon } from "@heroicons/react/outline"
 import ReccomendedTextBubble from "./ReccomendedTextBubble"

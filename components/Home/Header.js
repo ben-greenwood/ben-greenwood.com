@@ -1,3 +1,5 @@
+import React from "react"
+
 const Header = () => (
   <div className="border-b border-slate-100 py-6 dark:border-slate-700 lg:pt-10 lg:pb-6">
     <div className="mt-4 flex items-center justify-between">

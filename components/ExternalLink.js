@@ -1,3 +1,5 @@
+import React from "react"
+
 const ExternalLink = ({ url, text }) => {
   return (
     <a

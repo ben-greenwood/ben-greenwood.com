@@ -1,7 +1,8 @@
-const classNames = require("classnames")
+import React from "react"
 import { motion } from "framer-motion"
 import { BookOpenIcon, ExternalLinkIcon } from "@heroicons/react/outline"
 import Image from "next/image"
+import cx from "classnames"
 
 const Article = ({ img, title, url, className, index }) => {
   new URL(url)
@@ -13,7 +14,7 @@ const Article = ({ img, title, url, className, index }) => {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className={classNames(
+      className={cx(
         { className },
         "group grid grid-cols-5 overflow-hidden rounded-md border border-gray-100 bg-white p-2 transition-transform duration-200 ease-in-out hover:scale-105"
       )}
