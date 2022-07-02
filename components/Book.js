@@ -1,3 +1,5 @@
+import React from "react"
+
 const Book = ({ book: { title, link, creator } }) => (
   <a
     href={link}

@@ -1,3 +1,4 @@
+import React from "react"
 import "../styles/globals.css"
 import "../public/css/satoshi.css"
 import { useEffect } from "react"
