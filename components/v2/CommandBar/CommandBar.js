@@ -8,68 +8,44 @@ import {
 
 import {
   BookOpenIcon,
-  EmojiHappyIcon,
   HomeIcon,
+  SunIcon,
+  MoonIcon,
 } from "@heroicons/react/outline"
 
 import CommandBarResults from "./CommandBarResults"
+import { useAppearance } from "utils/contexts/AppearanceContext"
+import { animatorStyle, positionerStyle, searchStyle } from "./styles"
 
 const CommandBar = ({ children }) => {
+  const { darkModeEnabled, setDarkModeEnabled } = useAppearance()
   const actions = [
     {
       id: "home",
       name: "Home",
       icon: <HomeIcon className="h-4 w-4" />,
-      shortcut: ["h"],
       keywords: "back",
       perform: () => (window.location.pathname = "/"),
     },
     {
-      id: "blog",
-      name: "Blog",
-      subtitle: "My weird words",
+      id: "bookshelf",
+      name: "Bookshelf",
       icon: <BookOpenIcon className="h-4 w-4" />,
-      shortcut: ["b"],
-      keywords: "writing words",
-      perform: () => (window.location.pathname = "/blog"),
+      keywords: "book read",
+      perform: () => (window.location.pathname = "/bookshelf"),
     },
     {
-      id: "contact",
-      name: "Contact",
-      icon: <EmojiHappyIcon className="h-4 w-4" />,
-      shortcut: ["c"],
-      keywords: "email",
-      perform: () => (window.location.pathname = "/contact"),
+      id: "toggle_appearance",
+      name: "Toggle appearance",
+      icon: darkModeEnabled ? (
+        <SunIcon className="h-4 w-4" />
+      ) : (
+        <MoonIcon className="h-4 w-4" />
+      ),
+      keywords: "dark light appearance",
+      perform: () => setDarkModeEnabled(!darkModeEnabled),
     },
   ]
-
-  const searchStyle = {
-    padding: "12px 16px",
-    fontSize: "16px",
-    width: "100%",
-    boxSizing: "border-box",
-    outline: "none",
-    border: "none",
-    background: "white",
-    color: "black",
-  }
-
-  const positionerStyle = {
-    zIndex: "50",
-  }
-
-  const animatorStyle = {
-    maxWidth: "600px",
-    width: "100%",
-    background: "#fff",
-    color: "#000",
-    borderRadius: "8px",
-    overflow: "hidden",
-    boxShadow:
-      "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
-    border: "1px solid #f3f4f6",
-
-  }
 
   return (
     <>

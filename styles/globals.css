@@ -21,9 +21,12 @@ a {
   box-sizing: border-box;
 }
 
-h1,
-h2 {
-  font-family: "Satoshi-Variable";
+.magnat-head {
+  font-family: "Magnat Head", serif;
+}
+
+.magnat-text {
+  font-family: "Magnat Text", serif;
 }
 
 .handwriting {
@@ -53,7 +56,11 @@ h2 {
 }
 
 .horizontal-dotted-border {
-  background-image: linear-gradient(to right, green 15%, rgba(255, 255, 255, 0) 0%);
+  background-image: linear-gradient(
+    to right,
+    green 15%,
+    rgba(255, 255, 255, 0) 0%
+  );
   background-position: bottom;
   background-size: 10px 1px;
   background-repeat: repeat-x;
@@ -67,7 +74,11 @@ h2 {
 }
 
 .dark .horizontal-dotted-border {
-  background-image: linear-gradient(to right, green 33%, rgba(255, 255, 255, 0) 0%);
+  background-image: linear-gradient(
+    to right,
+    green 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
 }
 
 .dark .vertical-dotted-border {

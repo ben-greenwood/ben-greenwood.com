@@ -1,9 +1,12 @@
 import "../styles/globals.css"
 import "../public/css/satoshi.css"
+import "../public/css/magnat.css"
 import { useEffect } from "react"
 import Script from "next/script"
 import { useRouter } from "next/router"
 import * as gtag from "../lib/gtag"
+import { AppearanceProvider } from "utils/contexts/AppearanceContext"
+import cx from "classnames"
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -37,9 +40,13 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <div id="app" className="dark">
-        <Component {...pageProps} />
-      </div>
+      <AppearanceProvider>
+        {({ darkModeEnabled }) => (
+          <div className={cx({ dark: darkModeEnabled })}>
+            <Component {...pageProps} />
+          </div>
+        )}
+      </AppearanceProvider>
     </>
   )
 }

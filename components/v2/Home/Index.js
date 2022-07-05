@@ -1,17 +1,23 @@
 import React from "react"
 import Page from "components/v2/Page"
 import Bio from "components/v2/Home/Bio"
-import Header from "components/v2/Home/Header"
+import Header from "components/v2/Header"
 
 const Home = () => {
   const head = {
     title: "Ben Greenwood",
     description: "A home for me on the internet",
   }
+
+  const animatedStrings = [
+    "Food Addict",
+    "Founding Engineer",
+    "Product Engineer",
+  ]
   return (
     <Page head={head}>
       <>
-        <Header />
+        <Header animatedStrings={animatedStrings} title="Ben Greenwood" />
         <div className="mt-8">
           <Bio />
         </div>
