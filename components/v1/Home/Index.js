@@ -16,7 +16,7 @@ export default function Home({ books }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body className="min-h-screen bg-white dark:bg-slate-900">
+      <div className="min-h-screen bg-white">
         <main className="mx-auto flex max-w-7xl flex-col px-6">
           <Header />
           <div className="flex-grow gap-8 lg:grid lg:grid-cols-12">
@@ -31,7 +31,7 @@ export default function Home({ books }) {
           </div>
         </main>
         <Footer />
-      </body>
+      </div>
     </div>
   )
 }

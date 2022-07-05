@@ -66,7 +66,9 @@ const CommandBar = ({ children }) => {
     borderRadius: "8px",
     overflow: "hidden",
     boxShadow:
-      "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);",
+      "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+    border: "1px solid #f3f4f6",
+
   }
 
   return (

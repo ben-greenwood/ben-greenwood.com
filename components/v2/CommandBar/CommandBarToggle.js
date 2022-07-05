@@ -6,9 +6,10 @@ const CommandBarToggle = () => {
   return (
     <button
       onClick={query.toggle}
-      className="fixed top-5 right-5 z-10 rounded-lg border border-gray-800 p-2 text-base text-white hover:bg-gray-900"
+      className="rounded-lg border border-gray-200 dark:border-gray-800 p-2 text-base text-black dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900"
     >
-      ⌘K
+      <span ref={cmdRef}>⌘</span>
+      <span ref={kRef}>K</span>
     </button>
   )
 }

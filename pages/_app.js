@@ -37,7 +37,9 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <Component {...pageProps} />
+      <div id="app" className="dark">
+        <Component {...pageProps} />
+      </div>
     </>
   )
 }

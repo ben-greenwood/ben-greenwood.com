@@ -6,7 +6,7 @@ const Bio = () => {
   const { query } = useKBar()
 
   return (
-    <div className="prose prose-invert prose-pink max-w-none space-y-8 text-slate-300">
+    <div className="prose prose-invert prose-pink max-w-none space-y-8 text-slate-600 dark:text-slate-300">
       <p>
         <span className="mr-1 text-lg">👋</span> I&apos;m a Product Engineer
         based in Bath UK, currently working at{" "}
@@ -27,12 +27,12 @@ const Bio = () => {
       </p>
       <button
         onClick={query.toggle}
-        className="group relative flex items-center justify-center px-4 py-2 hover:border-green-800"
+        className="group relative flex items-center justify-center px-4 py-2 hover:border-green-200 dark:hover:border-green-800"
       >
-        <div className="absolute h-full w-full animate-pulse rounded-lg border border-green-900 px-4 py-2 group-hover:border-green-800"></div>
+        <div className="absolute h-full w-full animate-pulse rounded-lg border border-green-100 dark:border-green-900 px-4 py-2 group-hover:border-green-200 dark:group-hover:border-green-800"></div>
         <div>
-          Use <kbd className="rounded bg-gray-900 p-1 px-2 text-sm">⌘</kbd>{" "}
-          <kbd className="rounded bg-gray-900 p-1 px-2 text-sm">K</kbd> to
+          Use <kbd className="rounded bg-gray-100 dark:bg-gray-900 p-1 px-2 text-sm">⌘</kbd>{" "}
+          <kbd className="rounded bg-gray-100 dark:bg-gray-900 p-1 px-2 text-sm">K</kbd> to
           browse →
         </div>
       </button>
