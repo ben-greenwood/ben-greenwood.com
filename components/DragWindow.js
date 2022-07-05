@@ -50,14 +50,14 @@ const DragWindow = ({ children }) => {
       <button
         id="draghandle"
         onMouseDown={handler}
-        class={cx(
+        className={cx(
           "absolute inset-y-0 left-0 z-10 cursor-ew-resize items-center px-2 sm:flex",
           {
             ["-left-5"]: rightPosition === windowWidth,
           }
         )}
       >
-        <div class="h-8 w-1.5 rounded-full bg-slate-400"></div>
+        <div className="h-8 w-1.5 rounded-full bg-slate-400"></div>
       </button>
       {children}
     </motion.div>
