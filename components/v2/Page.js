@@ -9,7 +9,7 @@ import AppearanceToggle from "components/v2/AppearanceToggle"
 const Page = ({ head, children }) => {
   return (
     <CommandBar>
-      <div className="absolute top-5 right-5 z-10 space-x-2">
+      <div className="absolute top-5 right-5 z-10 flex space-x-2">
         <AppearanceToggle />
         <CommandBarToggle />
       </div>

@@ -27,9 +27,9 @@ const Bio = () => {
       </p>
       <button
         onClick={query.toggle}
-        className="group relative flex items-center justify-center px-4 py-2 hover:border-green-200 dark:hover:border-green-800"
+        className="group relative flex items-center justify-center px-4 py-2 hover:border-slate-200 dark:hover:border-slate-800"
       >
-        <div className="absolute h-full w-full animate-pulse rounded-lg border border-green-100 px-4 py-2 group-hover:border-green-200 dark:border-green-900 dark:group-hover:border-green-800"></div>
+        <div className="absolute h-full w-full animate-pulse rounded-lg border border-slate-100 px-4 py-2 group-hover:border-slate-200 dark:border-slate-900 dark:group-hover:border-slate-800"></div>
         <div>
           Use{" "}
           <kbd className="rounded bg-gray-100 p-1 px-2 text-sm dark:bg-gray-900">

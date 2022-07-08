@@ -1,3 +1,4 @@
+import React from "react"
 import {
   KBarProvider,
   KBarPortal,
@@ -16,34 +17,50 @@ import {
 import CommandBarResults from "./CommandBarResults"
 import { useAppearance } from "utils/contexts/AppearanceContext"
 import { animatorStyle, positionerStyle, searchStyle } from "./styles"
+import { useRouter } from "next/router"
 
 const CommandBar = ({ children }) => {
   const { darkModeEnabled, setDarkModeEnabled } = useAppearance()
+  const router = useRouter()
+
   const actions = [
     {
       id: "home",
       name: "Home",
       icon: <HomeIcon className="h-4 w-4" />,
       keywords: "back",
-      perform: () => (window.location.pathname = "/"),
+      perform: () => router.push("/"),
     },
     {
       id: "bookshelf",
       name: "Bookshelf",
       icon: <BookOpenIcon className="h-4 w-4" />,
       keywords: "book read",
-      perform: () => (window.location.pathname = "/bookshelf"),
+      perform: () => router.push("/bookshelf"),
     },
     {
-      id: "toggle_appearance",
-      name: "Toggle appearance",
-      icon: darkModeEnabled ? (
-        <SunIcon className="h-4 w-4" />
-      ) : (
-        <MoonIcon className="h-4 w-4" />
-      ),
-      keywords: "dark light appearance",
-      perform: () => setDarkModeEnabled(!darkModeEnabled),
+      id: "theme",
+      name: "Change theme…",
+      icon: <SunIcon className="h-4 w-4" />,
+      keywords: "interface color dark light",
+    },
+    {
+      id: "darkTheme",
+      name: "Dark",
+      keywords: "dark theme",
+      section: "",
+      icon: <MoonIcon className="h-4 w-4" />,
+      perform: () => setDarkModeEnabled(true),
+      parent: "theme",
+    },
+    {
+      id: "lightTheme",
+      name: "Light",
+      keywords: "light theme",
+      section: "",
+      icon: <SunIcon className="h-4 w-4" />,
+      perform: () => setDarkModeEnabled(false),
+      parent: "theme",
     },
   ]
 

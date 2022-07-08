@@ -11,9 +11,11 @@ const Home = () => {
 
   const animatedStrings = [
     "Food Addict",
+    "Chief Coffee Taster",
     "Founding Engineer",
     "Product Engineer",
   ]
+
   return (
     <Page head={head}>
       <>

@@ -10,7 +10,7 @@ function CommandBarResults() {
         items={results}
         onRender={({ item, active }) =>
           typeof item === "string" ? (
-            <div style={groupNameStyle}>{item}</div>
+            <div>{item}</div>
           ) : (
             <CommandBarResultItem
               action={item}
