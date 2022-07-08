@@ -15,7 +15,7 @@ const AnimatedType = ({ strings = ["Placeholder"] }) => {
     typed.current = new Typed(el.current, options)
 
     return () => typed.current.destroy()
-  }, [])
+  }, [strings])
 
   return (
     <div className="h-8">
