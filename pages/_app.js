@@ -1,6 +1,7 @@
 import React from "react"
 import "../styles/globals.css"
 import "../public/css/satoshi.css"
+import "../public/css/magnat.css"
 import { useEffect } from "react"
 import Script from "next/script"
 import { useRouter } from "next/router"
