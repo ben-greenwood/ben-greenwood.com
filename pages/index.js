@@ -1,6 +1,7 @@
 import React from "react"
 import V1Page from "components/v1/Home/Home"
 import { getBooksFromOku } from "lib/oku"
+import V2Page from "components/v2/Home/Home"
 import DragWindow from "components/DragWindow"
 import VersionHistory from "components/VersionHistory"
 
@@ -8,7 +9,7 @@ const Home = ({ books }) => {
   return (
     <div>
       <DragWindow>
-        <div className="relative h-screen bg-white" />
+        <V2Page />
       </DragWindow>
 
       <VersionHistory>

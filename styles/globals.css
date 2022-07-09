@@ -34,3 +34,68 @@ h2 {
 .wavy {
   text-decoration-style: wavy;
 }
+
+.bg-dots {
+  background: linear-gradient(90deg, #fff 15px, transparent 1%) 50%,
+    linear-gradient(#fff 15px, transparent 1%) 50%, rgba(0, 0, 0, 0.1);
+  background-size: 16px 16px;
+}
+
+.dotted-border {
+  background-image: linear-gradient(
+    to right,
+    #cbd5e1 40%,
+    rgba(255, 255, 255, 0) 20%
+  );
+  background-position: top;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
+
+.horizontal-dotted-border {
+  background-image: linear-gradient(
+    to right,
+    green 15%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+}
+
+.vertical-dotted-border {
+  background-image: linear-gradient(green 15%, rgba(255, 255, 255, 0) 0%);
+  background-position: right;
+  background-size: 1px 10px;
+  background-repeat: repeat-y;
+}
+
+.dark .horizontal-dotted-border {
+  background-image: linear-gradient(
+    to right,
+    green 33%,
+    rgba(255, 255, 255, 0) 0%
+  );
+}
+
+.dark .vertical-dotted-border {
+  background-image: linear-gradient(green 33%, rgba(255, 255, 255, 0) 0%);
+}
+
+.animate-pulse {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.typed-cursor {
+  @apply text-green-600;
+}
