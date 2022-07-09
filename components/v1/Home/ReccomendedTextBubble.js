@@ -1,6 +1,6 @@
 import React from "react"
 import { RoughNotation } from "react-rough-notation"
-import useWindowSize from "../../utils/hooks/UseWindowSize"
+import useWindowSize from "utils/hooks/UseWindowSize"
 import { motion } from "framer-motion"
 
 const ReccomendedTextBubble = () => {
