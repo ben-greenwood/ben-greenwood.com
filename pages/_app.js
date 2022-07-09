@@ -6,6 +6,8 @@ import { useEffect } from "react"
 import Script from "next/script"
 import { useRouter } from "next/router"
 import * as gtag from "../lib/gtag"
+import { AppearanceProvider } from "utils/contexts/AppearanceContext"
+import cx from "classnames"
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -39,7 +41,13 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <Component {...pageProps} />
+      <AppearanceProvider>
+        {({ darkModeEnabled }) => (
+          <div className={cx("bg-white", { "dark bg-black": darkModeEnabled })}>
+            <Component {...pageProps} />
+          </div>
+        )}
+      </AppearanceProvider>
     </>
   )
 }
