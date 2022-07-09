@@ -21,9 +21,12 @@ a {
   box-sizing: border-box;
 }
 
-h1,
-h2 {
-  font-family: "Satoshi-Variable";
+.magnat-head {
+  font-family: "Magnat Head", serif;
+}
+
+.magnat-text {
+  font-family: "Magnat Text", serif;
 }
 
 .handwriting {
