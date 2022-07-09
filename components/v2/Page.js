@@ -1,14 +1,17 @@
 import React from "react"
 import Head from "next/head"
 import GridBg from "components/v2/GridBg"
+import CommandBar from "components/v2/CommandBar/CommandBar"
+import CommandBarToggle from "components/v2/CommandBar/CommandBarToggle"
 import Footer from "components/v2/Footer"
 import AppearanceToggle from "components/v2/AppearanceToggle"
 
 const Page = ({ head, children }) => {
   return (
-    <>
+    <CommandBar>
       <div className="absolute top-10 right-5 z-10 flex space-x-2 md:top-5">
         <AppearanceToggle />
+        <CommandBarToggle />
       </div>
       <div className="relative bg-white dark:bg-black">
         <GridBg />
@@ -28,7 +31,7 @@ const Page = ({ head, children }) => {
           </main>
         </div>
       </div>
-    </>
+    </CommandBar>
   )
 }
 
