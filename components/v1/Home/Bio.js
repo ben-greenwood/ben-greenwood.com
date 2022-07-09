@@ -1,10 +1,10 @@
 import React from "react"
-import ExternalLink from "../ExternalLink"
+import ExternalLink from "components/v1/ExternalLink"
 import { FireIcon, BookOpenIcon } from "@heroicons/react/outline"
-import Book from "../Book"
+import Book from "components/v1/Book"
 
 const Bio = ({ books }) => (
-  <div className="prose prose-orange dark:prose-invert dark:prose-orange max-w-none space-y-8 sm:space-y-10">
+  <div className="prose prose-orange max-w-none space-y-8 sm:space-y-10">
     <p>
       <span className="mr-1 text-lg">👋</span> I&apos;m a Product Engineer based
       in Bath UK, currently working at{" "}
