@@ -1,7 +1,10 @@
 import React from "react"
 import ExternalLink from "components/v2/ExternalLink"
+import { useKBar } from "kbar"
 
 const Bio = () => {
+  const { query } = useKBar()
+
   return (
     <div className="prose prose-invert prose-pink max-w-none space-y-8 font-normal text-slate-600 dark:text-slate-300">
       <p>
@@ -23,6 +26,7 @@ const Bio = () => {
         smooth and effortless as possible.
       </p>
       <button
+        onClick={query.toggle}
         className="group relative flex items-center justify-center px-4 py-2 hover:border-slate-200 dark:hover:border-slate-800"
       >
         <div className="absolute h-full w-full animate-pulse rounded-lg border border-slate-100 px-4 py-2 group-hover:border-slate-200 dark:border-slate-900 dark:group-hover:border-slate-800"></div>
