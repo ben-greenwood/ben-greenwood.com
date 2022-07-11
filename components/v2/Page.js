@@ -13,7 +13,7 @@ const Page = ({ head, children }) => {
         <AppearanceToggle />
         <CommandBarToggle />
       </div>
-      <div className="relative bg-white dark:bg-black">
+      <div className="default-transition relative bg-white dark:bg-black">
         <GridBg />
         <Head>
           <title>{head.title ?? "Ben Greenwood"}</title>
