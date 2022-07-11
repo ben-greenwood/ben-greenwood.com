@@ -12,6 +12,7 @@ import {
   SunIcon,
   MoonIcon,
   BookOpenIcon,
+  ColorSwatchIcon,
 } from "@heroicons/react/outline"
 
 import CommandBarResults from "./CommandBarResults"
@@ -37,6 +38,13 @@ const CommandBar = ({ children }) => {
       icon: <BookOpenIcon className="h-4 w-4" />,
       keywords: "book read",
       perform: () => router.push("/bookshelf"),
+    },
+    {
+      id: "tools",
+      name: "My Tools",
+      icon: <ColorSwatchIcon className="h-4 w-4" />,
+      keywords: "tools software productivity",
+      perform: () => router.push("/tools"),
     },
     {
       id: "theme",
