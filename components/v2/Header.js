@@ -13,7 +13,7 @@ const Header = ({ title, subtitle, animatedStrings }) => {
             {animatedStrings && <AnimatedType strings={animatedStrings} />}
           </p>
           {subtitle && (
-            <p className="text-base font-medium text-slate-700 dark:text-slate-300 md:text-base">
+            <p className="mt-1 text-sm font-medium text-slate-700 dark:text-slate-300 md:text-base">
               {subtitle}
             </p>
           )}
