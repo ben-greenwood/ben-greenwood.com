@@ -38,6 +38,10 @@ a {
   text-decoration-style: wavy;
 }
 
+.default-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
 .bg-dots {
   background: linear-gradient(90deg, #fff 15px, transparent 1%) 50%,
     linear-gradient(#fff 15px, transparent 1%) 50%, rgba(0, 0, 0, 0.1);
@@ -86,16 +90,18 @@ a {
 }
 
 .animate-pulse {
-  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  animation: pulse 5s cubic-bezier(0.4, 0, 0.6, 0) infinite;
 }
 
 @keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
+  0% {
+    opacity: 0;
   }
   50% {
-    opacity: 0.5;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 

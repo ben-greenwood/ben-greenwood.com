@@ -32,10 +32,10 @@ const Bio = () => {
         <div className="absolute h-full w-full animate-pulse rounded-lg border border-slate-100 px-4 py-2 group-hover:border-slate-200 dark:border-slate-900 dark:group-hover:border-slate-800"></div>
         <div>
           Use{" "}
-          <kbd className="rounded bg-gray-100 p-1 px-2 text-sm dark:bg-gray-900">
+          <kbd className="rounded bg-gray-100 p-1 px-2 text-sm transition-all duration-500 dark:bg-gray-900">
             ⌘
           </kbd>{" "}
-          <kbd className="rounded bg-gray-100 p-1 px-2 text-sm dark:bg-gray-900">
+          <kbd className="rounded bg-gray-100 p-1 px-2 text-sm transition-all duration-500 dark:bg-gray-900">
             K
           </kbd>{" "}
           to browse →

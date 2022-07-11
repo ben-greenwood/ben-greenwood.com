@@ -7,7 +7,12 @@ import {
   KBarSearch,
 } from "kbar"
 
-import { HomeIcon, SunIcon, MoonIcon } from "@heroicons/react/outline"
+import {
+  HomeIcon,
+  SunIcon,
+  MoonIcon,
+  BookOpenIcon,
+} from "@heroicons/react/outline"
 
 import CommandBarResults from "./CommandBarResults"
 import { useAppearance } from "utils/contexts/AppearanceContext"
@@ -25,6 +30,13 @@ const CommandBar = ({ children }) => {
       icon: <HomeIcon className="h-4 w-4" />,
       keywords: "back",
       perform: () => router.push("/"),
+    },
+    {
+      id: "bookshelf",
+      name: "Bookshelf",
+      icon: <BookOpenIcon className="h-4 w-4" />,
+      keywords: "book read",
+      perform: () => router.push("/bookshelf"),
     },
     {
       id: "theme",
