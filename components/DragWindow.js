@@ -1,38 +1,34 @@
-import React, { useEffect, useState } from "react"
-import { motion } from "framer-motion"
+import React, { useState } from "react"
 import cx from "classnames"
+import { useDrag } from "utils/contexts/DragContext"
+import useWindowSize from "utils/hooks/UseWindowSize"
 
 const DragWindow = ({ children }) => {
-  const [windowWidth, setWindowWidth] = useState(null)
-  const [dragging, setDragging] = useState(0)
+  const size = useWindowSize()
+  const { dragPosition, setDragPosition, dragging, setDragging } = useDrag()
   const [startPosition, setStartPosition] = useState(0)
-  const [rightPosition, setRightPosition] = useState(0)
-
-  useEffect(() => {
-    setWindowWidth(window.innerWidth)
-  }, [])
 
   const calculateRightPosition = (eventX) => {
     const dontTransitionFromRight =
-      startPosition === windowWidth && eventX > windowWidth * 0.9
+      startPosition === size.width && eventX > size.width * 0.9
     const doTransitionFromLeft =
-      startPosition !== windowWidth && eventX > windowWidth * 0.1
-    if (dontTransitionFromRight || doTransitionFromLeft) return windowWidth
+      startPosition !== size.width && eventX > size.width * 0.1
+    if (dontTransitionFromRight || doTransitionFromLeft) return size.width
 
     return 0
   }
 
   const handler = () => {
-    setStartPosition(rightPosition)
+    setStartPosition(dragPosition)
 
     const onMouseMove = (mouseMoveEvent) => {
       setDragging(true)
-      setRightPosition(mouseMoveEvent.pageX)
+      setDragPosition(mouseMoveEvent.pageX)
     }
 
     const onMouseUp = (mouseMoveEvent) => {
       setDragging(false)
-      setRightPosition(calculateRightPosition(mouseMoveEvent.pageX))
+      setDragPosition(calculateRightPosition(mouseMoveEvent.pageX))
       document.body.removeEventListener("mousemove", onMouseMove)
       document.body.removeEventListener("mouseup", onMouseUp)
     }
@@ -41,11 +37,11 @@ const DragWindow = ({ children }) => {
     document.body.addEventListener("mouseup", onMouseUp)
   }
   return (
-    <motion.div
+    <div
       className={cx("relative z-20", {
         ["transition-all duration-500 ease-in-out"]: !dragging,
       })}
-      style={{ right: -rightPosition }}
+      style={{ right: -dragPosition }}
     >
       <button
         id="draghandle"
@@ -53,14 +49,14 @@ const DragWindow = ({ children }) => {
         className={cx(
           "absolute inset-y-0 left-0 z-10 cursor-ew-resize items-center px-2 sm:flex",
           {
-            ["-left-5"]: rightPosition === windowWidth,
+            ["-left-5"]: dragPosition === size.width,
           }
         )}
       >
         <div className="h-8 w-1.5 rounded-full bg-slate-400"></div>
       </button>
       {children}
-    </motion.div>
+    </div>
   )
 }
 export default DragWindow

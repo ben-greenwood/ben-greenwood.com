@@ -5,7 +5,7 @@ const VersionHistory = ({ children }) => {
   const [showModal, setShowModal] = useState(true)
 
   return (
-    <div className="absolute top-0 left-0 h-full w-full overflow-hidden">
+    <div className="absolute top-0 left-0 w-full overflow-hidden">
       <Modal
         cta="Look around"
         onClick={() => setShowModal(false)}
