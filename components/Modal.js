@@ -1,5 +1,4 @@
 import React from "react"
-import { motion } from "framer-motion"
 
 const Modal = ({ children, show, onClick, cta }) => {
   if (!show) return null
@@ -14,21 +13,9 @@ const Modal = ({ children, show, onClick, cta }) => {
         role="dialog"
         aria-modal="true"
       >
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
-        ></motion.div>
+        <div className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 0.5 }}
-          transition={{ duration: 0.3, delay: 0.3 }}
-          className="fixed inset-0 z-10 overflow-y-auto"
-        >
+        <div className="fixed inset-0 z-10 overflow-y-auto">
           <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
             <div className="relative transform overflow-hidden rounded-lg bg-white px-4 pt-5 pb-4 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-sm sm:p-8">
               <div className="">{children}</div>
@@ -43,7 +30,7 @@ const Modal = ({ children, show, onClick, cta }) => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   )
