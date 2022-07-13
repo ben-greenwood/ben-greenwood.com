@@ -5,6 +5,7 @@ export const searchStyle = {
   boxSizing: "border-box",
   outline: "none",
   border: "none",
+  borderBottom: "1px solid #e2e8f0",
   background: "white",
   color: "black",
 }
