@@ -3,7 +3,6 @@ import Head from "next/head"
 import GridBg from "components/v2/GridBg"
 import CommandBar from "components/v2/CommandBar/CommandBar"
 import CommandBarToggle from "components/v2/CommandBar/CommandBarToggle"
-import Footer from "components/v2/Footer"
 import AppearanceToggle from "components/v2/AppearanceToggle"
 
 const Page = ({ head, children }) => {
@@ -24,11 +23,10 @@ const Page = ({ head, children }) => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <div className="relative mx-auto min-h-screen max-w-3xl">
-          <main className="px-6 pt-12 md:pt-32">
-            {children}
-            <Footer />
-          </main>
+        <div className="relative mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-between">
+          <div className="min-h-screen w-full items-center py-12 sm:flex">
+            <main className="w-full px-6 ">{children}</main>
+          </div>
         </div>
       </div>
     </CommandBar>
