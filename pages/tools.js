@@ -13,9 +13,12 @@ const ToolKit = () => {
   return (
     <Page head={head}>
       <>
-        <Header title="My Tool Kit" subtitle="The tools I use daily" />
+        <Header
+          title="My Tool Kit"
+          subtitle="My favourite apps and resources"
+        />
         <div className="mt-6">
-          <h4 className="magnat-text inline border-b border-black pb-1 font-medium text-black dark:border-slate-300 dark:text-slate-200">
+          <h4 className="magnat-text inline border-b border-black pb-1 text-sm font-medium text-black dark:border-slate-300 dark:text-slate-200">
             Must Haves
           </h4>
           <div className="mt-4 grid gap-x-6 sm:grid-cols-2">
@@ -31,7 +34,7 @@ const ToolKit = () => {
           </div>
         </div>
         <div className="mt-10">
-          <h4 className="magnat-text inline border-b border-black pb-1 text-black dark:border-slate-200 dark:text-slate-200">
+          <h4 className="magnat-text inline border-b border-black pb-1 text-sm text-black dark:border-slate-200 dark:text-slate-200">
             Productivity Enhancers
           </h4>
           <div className="mt-4 grid gap-x-6 sm:grid-cols-2">
@@ -47,7 +50,7 @@ const ToolKit = () => {
           </div>
         </div>
         <div className="mt-10">
-          <h4 className="magnat-text inline border-b border-black pb-1 text-black dark:border-slate-200 dark:text-slate-200">
+          <h4 className="magnat-text inline border-b border-black pb-1 text-sm text-black dark:border-slate-200 dark:text-slate-200">
             The Rest
           </h4>
           <div className="mt-4 grid gap-x-6 sm:grid-cols-2">
