@@ -42,7 +42,7 @@ const Bio = () => {
         <p className="mt-4">
           I primarily work with a Ruby on Rails backend and a React frontend. I
           am currently learning Elixir and Phoenix while also getting to grips
-          with Typescript.
+          with TypeScript.
         </p>
       </div>
 
