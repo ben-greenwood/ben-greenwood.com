@@ -6,7 +6,7 @@ const ExternalLink = ({ url, text }) => {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="wavy underline underline-offset-4 transition-opacity duration-200 ease-in-out hover:opacity-75"
+      className="underline underline-offset-2 transition-opacity duration-200 ease-in-out hover:opacity-75"
     >
       {text}
     </a>

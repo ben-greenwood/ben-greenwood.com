@@ -6,30 +6,38 @@ const Bio = () => {
   const { query } = useKBar()
 
   return (
-    <div className="prose prose-invert prose-pink max-w-none space-y-8 font-normal text-slate-600 dark:text-slate-300">
+    <div className="max-w-none font-normal text-slate-600 dark:text-slate-200">
       <p>
-        <span className="mr-1 text-lg">👋</span> I&apos;m a Product Engineer
-        based in Bath UK, currently working at{" "}
-        <ExternalLink url="https://appearhere.co.uk" text="Appear [ here ]" />,
-        where I&apos;m helping make flexible retail more accessible.
+        I’m a <em className="magnat-text">Product Designer</em> and{" "}
+        <em className="magnat-text">Full Stack Engineer</em> who enjoys tackling
+        problems with a focus on simplicity, usability, and responsiveness.
       </p>
-      <p>
-        Previously, I worked at{" "}
-        <ExternalLink url="https://mmtm.io" text="mmtm" /> - a small digital
-        agency based out of Cheltenham - where I spent most of my time
-        designing, prototyping and building web/mobile apps for companies
-        spanning multiple industries from Telecoms to VR.
-      </p>
-      <p>
-        I enjoy writing code, but my passion is in building useful products. I
-        love sweating the details of a design and making each interaction as
-        smooth and effortless as possible.
-      </p>
+      <div className="mt-10">
+        <h5 className="text-sm font-medium text-slate-500 dark:text-slate-300">
+          Currently
+        </h5>
+        <hr className="mt-2 w-6 border-green-600" />
+        <p className="mt-4">
+          <em className="magnat-text">Senior Product Engineer</em> at{" "}
+          <ExternalLink url="https://www.getaklimate.com" text="Aklimate" />, an
+          early stage startup{" "}
+          <ExternalLink
+            url="https://www.ycombinator.com/companies/aklimate"
+            text="(YC)"
+          />{" "}
+          helping industry suppliers measure and cut their carbon output.
+        </p>
+        <p className="mt-4">
+          Previously at{" "}
+          <ExternalLink url="https://appearhere.co.uk" text="Appear Here" /> and{" "}
+          <ExternalLink url="https://mmtm.io" text="mmtm" />.
+        </p>
+      </div>
+
       <button
         onClick={query.toggle}
-        className="group relative flex items-center justify-center px-4 py-2 hover:border-slate-200 dark:hover:border-slate-800"
+        className="default-transition group mt-10 flex items-center justify-center rounded-lg border border-slate-200 px-4 py-2 hover:border-slate-300 hover:bg-slate-100 dark:border-slate-800 dark:hover:border-slate-700 dark:hover:bg-slate-900"
       >
-        <div className="absolute h-full w-full animate-pulse rounded-lg border border-slate-100 px-4 py-2 group-hover:border-slate-200 dark:border-slate-900 dark:group-hover:border-slate-800"></div>
         <div>
           Use{" "}
           <kbd className="rounded bg-gray-100 p-1 px-2 text-sm transition-all duration-500 dark:bg-gray-900">
