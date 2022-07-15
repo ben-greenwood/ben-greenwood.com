@@ -42,23 +42,6 @@ a {
   @apply transition-all duration-300 ease-in-out;
 }
 
-.bg-dots {
-  background: linear-gradient(90deg, #fff 15px, transparent 1%) 50%,
-    linear-gradient(#fff 15px, transparent 1%) 50%, rgba(0, 0, 0, 0.1);
-  background-size: 16px 16px;
-}
-
-.dotted-border {
-  background-image: linear-gradient(
-    to right,
-    #cbd5e1 40%,
-    rgba(255, 255, 255, 0) 20%
-  );
-  background-position: top;
-  background-size: 10px 1px;
-  background-repeat: repeat-x;
-}
-
 .horizontal-dotted-border {
   background-image: linear-gradient(
     to right,

@@ -46,7 +46,10 @@ function MyApp({ Component, pageProps }) {
         <AppearanceProvider>
           {({ darkModeEnabled }) => (
             <div
-              className={cx("bg-white", { "dark bg-black": darkModeEnabled })}
+              className={cx({
+                "dark bg-black": darkModeEnabled,
+                "bg-white": !darkModeEnabled,
+              })}
             >
               <Component {...pageProps} />
             </div>

@@ -29,6 +29,7 @@ const DragWindow = ({ children }) => {
     const onMouseUp = (mouseMoveEvent) => {
       setDragging(false)
       setDragPosition(calculateRightPosition(mouseMoveEvent.pageX))
+      setStartPosition(calculateRightPosition(mouseMoveEvent.pageX))
       document.body.removeEventListener("mousemove", onMouseMove)
       document.body.removeEventListener("mouseup", onMouseUp)
     }

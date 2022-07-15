@@ -11,13 +11,8 @@ export const AppearanceProvider = ({ children }) => {
   const [darkModeEnabled, setDarkModeEnabled] = useState(true)
 
   useEffect(() => {
-    if (darkModeEnabled) {
-      document.body.classList.add("bg-black")
-      document.body.classList.remove("bg-white")
-    } else {
-      document.body.classList.add("bg-white")
-      document.body.classList.remove("bg-black")
-    }
+    document.body.classList.toggle("bg-black", darkModeEnabled)
+    document.body.classList.toggle("bg-white", !darkModeEnabled)
   }, [darkModeEnabled])
 
   return (
