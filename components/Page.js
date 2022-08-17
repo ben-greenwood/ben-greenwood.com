@@ -1,9 +1,9 @@
 import React from "react"
 import Head from "next/head"
-import GridBg from "components/v2/GridBg"
-import CommandBar from "components/v2/CommandBar/CommandBar"
-import CommandBarToggle from "components/v2/CommandBar/CommandBarToggle"
-import AppearanceToggle from "components/v2/AppearanceToggle"
+import GridBg from "components/GridBg"
+import CommandBar from "components/CommandBar/CommandBar"
+import CommandBarToggle from "components/CommandBar/CommandBarToggle"
+import AppearanceToggle from "components/AppearanceToggle"
 
 const Page = ({ head, children }) => {
   return (

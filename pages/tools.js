@@ -1,7 +1,7 @@
 import React from "react"
-import Page from "components/v2/Page"
-import Header from "components/v2/Header"
-import Tool from "components/v2/ToolKit/Tool"
+import Page from "components/Page"
+import Header from "components/Header"
+import Tool from "components/ToolKit/Tool"
 import { criticalTools, productivityTools, otherTools } from "utils/data/tools"
 
 const ToolKit = () => {

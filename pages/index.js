@@ -1,50 +1,31 @@
-import React, { useEffect, useState } from "react"
-import V1Page from "components/v1/Home/Home"
-import V2Page from "components/v2/Home/Home"
-import { getCurrentBooksFromOku } from "lib/oku"
-import DragWindow from "components/DragWindow"
-import VersionHistory from "components/VersionHistory"
-import useWindowSize from "utils/hooks/UseWindowSize"
-import { useDrag } from "utils/contexts/DragContext"
+import Bio from "components/Home/Bio"
+import Header from "components/Header"
+import Page from "components/Page"
+import React from "react"
 
-const Home = ({ books }) => {
-  const size = useWindowSize()
-  const { dragPosition } = useDrag()
-  const [showVersionHistory, setShowVersionHistory] = useState(false)
+const Home = () => {
+  const head = {
+    title: "Ben Greenwood",
+    description: "A home for me on the internet",
+  }
 
-  useEffect(() => {
-    if (dragPosition === 0) {
-      setTimeout(() => setShowVersionHistory(false), 500)
-    } else {
-      setShowVersionHistory(true)
-    }
-  }, [dragPosition])
+  const animatedStrings = [
+    "Food Addict",
+    "Chief Coffee Analyst",
+    "Founding Engineer",
+    "Product Engineer",
+  ]
 
   return (
-    <>
-      {size.width >= 768 ? (
-        <div className="overflow-x-hidden">
-          <DragWindow>
-            <V2Page />
-          </DragWindow>
-
-          {showVersionHistory && (
-            <VersionHistory>
-              <V1Page books={books} />
-            </VersionHistory>
-          )}
+    <Page head={head}>
+      <>
+        <Header animatedStrings={animatedStrings} title="Ben Greenwood" />
+        <div className="mt-8">
+          <Bio />
         </div>
-      ) : (
-        <V2Page />
-      )}
-    </>
+      </>
+    </Page>
   )
-}
-
-export async function getServerSideProps() {
-  const { books } = await getCurrentBooksFromOku()
-
-  return { props: { books } }
 }
 
 export default Home

@@ -7,7 +7,7 @@ import {
   ColorSwatchIcon,
 } from "@heroicons/react/outline"
 
-import { TwitterIcon, GitHubIcon, DribbbleIcon } from "components/v2/Icons"
+import { TwitterIcon, GitHubIcon, DribbbleIcon } from "components/Icons"
 
 import { useRouter } from "next/router"
 import { useAppearance } from "utils/contexts/AppearanceContext"

@@ -1,7 +1,7 @@
 import React from "react"
-import Page from "components/v2/Page"
-import Header from "components/v2/Header"
-import Book from "components/v2/Bookshelf/Book"
+import Page from "components/Page"
+import Header from "components/Header"
+import Book from "components/Bookshelf/Book"
 import { getCurrentBooksFromOku, getFavBooksFromOku } from "lib/oku.js"
 
 const Bookshelf = ({ currentBooks, favBooks }) => {
