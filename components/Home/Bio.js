@@ -1,5 +1,5 @@
 import React from "react"
-import ExternalLink from "components/v2/ExternalLink"
+import ExternalLink from "components/ExternalLink"
 import { useKBar } from "kbar"
 
 const Bio = () => {
@@ -39,7 +39,7 @@ const Bio = () => {
           Stack
         </h5>
         <hr className="mt-2 w-6 border-green-600" />
-        <p className="mt-4">
+        <p className="mt-4 ">
           I primarily work with a Ruby on Rails backend and a React frontend. I
           am currently learning Elixir and Phoenix while also getting to grips
           with TypeScript.

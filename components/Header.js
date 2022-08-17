@@ -1,5 +1,5 @@
 import React from "react"
-import AnimatedType from "components/v2/AnimatedType"
+import AnimatedType from "components/AnimatedType"
 
 const Header = ({ title, subtitle, animatedStrings }) => {
   return (

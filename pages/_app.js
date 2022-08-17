@@ -7,7 +7,6 @@ import Script from "next/script"
 import { useRouter } from "next/router"
 import * as gtag from "../lib/gtag"
 import { AppearanceProvider } from "utils/contexts/AppearanceContext"
-import { DragProvider } from "utils/contexts/DragContext"
 import cx from "classnames"
 
 function MyApp({ Component, pageProps }) {
@@ -42,20 +41,18 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
-      <DragProvider>
-        <AppearanceProvider>
-          {({ darkModeEnabled }) => (
-            <div
-              className={cx({
-                "dark bg-black": darkModeEnabled,
-                "bg-white": !darkModeEnabled,
-              })}
-            >
-              <Component {...pageProps} />
-            </div>
-          )}
-        </AppearanceProvider>
-      </DragProvider>
+      <AppearanceProvider>
+        {({ darkModeEnabled }) => (
+          <div
+            className={cx({
+              "dark bg-black": darkModeEnabled,
+              "bg-white": !darkModeEnabled,
+            })}
+          >
+            <Component {...pageProps} />
+          </div>
+        )}
+      </AppearanceProvider>
     </>
   )
 }

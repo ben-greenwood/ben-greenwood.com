@@ -66,6 +66,12 @@ export const productivityTools = [
 
 export const otherTools = [
   {
+    link: "https://vercel.com/",
+    title: "Vercel",
+    tag: "Hosting",
+    icon: "vercel",
+  },
+  {
     link: "https://keychron.com",
     title: "Keychron",
     tag: "Keyboard",

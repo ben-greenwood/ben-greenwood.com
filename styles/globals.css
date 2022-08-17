@@ -63,13 +63,13 @@ a {
 .dark .horizontal-dotted-border {
   background-image: linear-gradient(
     to right,
-    green 33%,
+    green 15%,
     rgba(255, 255, 255, 0) 0%
   );
 }
 
 .dark .vertical-dotted-border {
-  background-image: linear-gradient(green 33%, rgba(255, 255, 255, 0) 0%);
+  background-image: linear-gradient(green 15%, rgba(255, 255, 255, 0) 0%);
 }
 
 .animate-pulse {
