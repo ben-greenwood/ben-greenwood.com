@@ -9,12 +9,7 @@ const Home = () => {
     description: "A home for me on the internet",
   }
 
-  const animatedStrings = [
-    "Food Addict",
-    "Chief Coffee Analyst",
-    "Founding Engineer",
-    "Product Engineer",
-  ]
+  const animatedStrings = ["Founding Engineer", "Product Engineer"]
 
   return (
     <Page head={head}>
