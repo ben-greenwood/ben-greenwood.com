@@ -20,7 +20,7 @@ const AnimatedType = ({ strings = ["Placeholder"] }) => {
   return (
     <div className="h-8">
       <h2
-        className="typed inline text-sm font-semibold text-green-600 md:text-base"
+        className="typed inline text-sm font-semibold text-slate-500 md:text-base"
         ref={el}
       ></h2>
     </div>
