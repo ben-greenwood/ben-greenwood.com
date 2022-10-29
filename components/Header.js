@@ -1,14 +1,24 @@
 import React from "react"
 import AnimatedType from "components/AnimatedType"
+import HomeAscii from "components/Header/HomeAscii"
+import BookshelfAscii from "components/Header/BookshelfAscii"
+import ToolsAscii from "components/Header/ToolsAscii"
+import { useRouter } from "next/router"
 
-const Header = ({ title, subtitle, animatedStrings }) => {
+const Header = ({ subtitle, animatedStrings }) => {
+  const { pathname } = useRouter()
+
+  const title = {
+    "/": <HomeAscii />,
+    "/bookshelf": <BookshelfAscii />,
+    "/tools": <ToolsAscii />,
+  }
+
   return (
-    <div className="pb-8">
+    <div className="pb-4 md:pb-8">
       <div className="flex items-center justify-between">
-        <div>
-          <h1 className="magnat-head text-2xl font-bold text-slate-800 dark:text-slate-200 md:text-3xl">
-            {title}
-          </h1>
+        <div className="mt-12 md:mt-0">
+          {title[pathname]}
           <p className="">
             {animatedStrings && <AnimatedType strings={animatedStrings} />}
           </p>
