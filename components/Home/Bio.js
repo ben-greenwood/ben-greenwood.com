@@ -52,10 +52,10 @@ const Bio = () => {
       >
         <div>
           Use{" "}
-          <kbd className="rounded bg-gray-100 p-1 px-2 text-sm transition-all duration-500 dark:bg-gray-900">
+          <kbd className="rounded bg-slate-100 p-1 px-2 text-sm transition-all duration-500 dark:bg-slate-900">
             ⌘
           </kbd>{" "}
-          <kbd className="rounded bg-gray-100 p-1 px-2 text-sm transition-all duration-500 dark:bg-gray-900">
+          <kbd className="rounded bg-slate-100 p-1 px-2 text-sm transition-all duration-500 dark:bg-slate-900">
             K
           </kbd>{" "}
           to browse →

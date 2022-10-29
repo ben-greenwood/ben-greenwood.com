@@ -11,7 +11,7 @@ function CommandBarResults() {
         items={results}
         onRender={({ item, active }) =>
           typeof item === "string" ? (
-            <div className="px-4 pt-4 pb-2 text-[10px] font-medium uppercase text-gray-700">
+            <div className="px-4 pt-4 pb-2 text-[10px] font-medium uppercase text-slate-700">
               {item}
             </div>
           ) : (

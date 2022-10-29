@@ -9,7 +9,7 @@ const AppearanceToggle = () => {
   return (
     <button
       onClick={() => setDarkModeEnabled(!darkModeEnabled)}
-      className="flex w-11 items-center justify-center rounded-lg border border-gray-200 p-2 text-base text-black hover:bg-gray-100 dark:border-gray-800 dark:text-white dark:hover:bg-gray-900"
+      className="flex w-11 items-center justify-center rounded-lg border border-slate-200 p-2 text-base text-black hover:bg-slate-100 dark:border-slate-800 dark:text-white dark:hover:bg-slate-900"
     >
       <motion.span
         key={darkModeEnabled}
