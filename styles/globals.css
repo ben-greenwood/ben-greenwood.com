@@ -89,5 +89,5 @@ a {
 }
 
 .typed-cursor {
-  @apply text-green-600;
+  @apply text-black dark:text-white;
 }
