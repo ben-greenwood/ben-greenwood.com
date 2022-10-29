@@ -15,4 +15,7 @@ const HomeAscii = () => {
   )
 }
 
+// Generate new ASCII art here
+// https://patorjk.com/software/taag/#p=display&f=ANSI%20Shadow&t=Bookshelf
+
 export default HomeAscii
