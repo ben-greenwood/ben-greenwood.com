@@ -8,6 +8,7 @@ import { useRouter } from "next/router"
 import * as gtag from "../lib/gtag"
 import { AppearanceProvider } from "utils/contexts/AppearanceContext"
 import cx from "classnames"
+import { Analytics } from "@vercel/analytics/react"
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
@@ -50,6 +51,7 @@ function MyApp({ Component, pageProps }) {
             })}
           >
             <Component {...pageProps} />
+            <Analytics />
           </div>
         )}
       </AppearanceProvider>
