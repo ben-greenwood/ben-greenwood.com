@@ -48,7 +48,7 @@ const Bio = () => {
 
       <button
         onClick={query.toggle}
-        className="default-transition group mt-10 flex items-center justify-center rounded-lg border border-slate-200 px-4 py-2 hover:border-slate-300 hover:bg-slate-100 dark:border-slate-800 dark:hover:border-slate-700 dark:hover:bg-slate-900"
+        className="default-transition group mt-10 flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2 hover:border-slate-300 hover:bg-slate-100 dark:border-slate-800 dark:bg-black dark:hover:border-slate-700 dark:hover:bg-slate-900"
       >
         <div>
           Use{" "}
