@@ -1,7 +1,6 @@
 import React from "react"
 import "../styles/globals.css"
-// import "../public/css/satoshi.css"
-// import "../public/css/magnat.css"
+import "../public/css/font.css"
 import { AppearanceProvider } from "utils/contexts/AppearanceContext"
 import cx from "classnames"
 import { Analytics } from "@vercel/analytics/react"
