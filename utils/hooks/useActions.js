@@ -7,7 +7,12 @@ import {
   ColorSwatchIcon,
 } from "@heroicons/react/outline"
 
-import { TwitterIcon, GitHubIcon, DribbbleIcon } from "components/Icons"
+import {
+  TwitterIcon,
+  GitHubIcon,
+  DribbbleIcon,
+  MastodonIcon,
+} from "components/Icons"
 
 import { useRouter } from "next/router"
 import { useAppearance } from "utils/contexts/AppearanceContext"
@@ -66,6 +71,14 @@ export default function useWindowSize() {
       keywords: "social",
       icon: <TwitterIcon className="h-4 w-4 text-black" />,
       perform: () => window.open("https://twitter.com/_beanacre", "_blank"),
+    },
+    {
+      id: "mastodon",
+      name: "Mastodon",
+      keywords: "social",
+      icon: <MastodonIcon className="h-4 w-4 text-black" />,
+      perform: () =>
+        window.open("https://mastodon.social/@ben_greenwood", "_blank"),
     },
     {
       id: "github",
