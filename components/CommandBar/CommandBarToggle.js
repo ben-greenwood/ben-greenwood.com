@@ -35,7 +35,7 @@ const CommandBarToggle = () => {
   return (
     <button
       onClick={query.toggle}
-      className="rounded-lg border border-slate-200 p-2 text-base text-black hover:bg-slate-100 dark:border-slate-800 dark:text-white dark:hover:bg-slate-900"
+      className="rounded-lg border border-slate-200 p-2 text-base text-black bg-white dark:bg-black hover:bg-slate-100 dark:border-slate-800 dark:text-white dark:hover:bg-slate-900"
     >
       <span ref={cmdRef}>⌘</span>
       <span ref={kRef}>K</span>

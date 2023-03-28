@@ -10,11 +10,14 @@ const CommandBarResultItem = ({ action, active }) => {
       style={{
         padding: "12px 16px",
       }}
-      className={cx("flex cursor-pointer items-center justify-between", {
-        ["bg-slate-100"]: active,
-      })}
+      className={cx(
+        "flex cursor-pointer items-center justify-between mx-2 rounded-lg",
+        {
+          ["bg-slate-100"]: active,
+        }
+      )}
     >
-      <div className="flex items-center gap-4 text-sm">
+      <div className="flex items-center gap-4 text-[13px]">
         {action.icon && action.icon}
         <div className="flex items-center">
           {parent && (

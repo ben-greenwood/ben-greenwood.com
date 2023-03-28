@@ -5,6 +5,7 @@ import {
   MoonIcon,
   BookOpenIcon,
   ColorSwatchIcon,
+  BriefcaseIcon,
 } from "@heroicons/react/outline"
 
 import {
@@ -16,6 +17,7 @@ import {
 
 import { useRouter } from "next/router"
 import { useAppearance } from "utils/contexts/AppearanceContext"
+import Image from "next/image"
 
 export default function useWindowSize() {
   const { setDarkModeEnabled } = useAppearance()
@@ -43,6 +45,74 @@ export default function useWindowSize() {
       keywords: "tools software productivity",
       perform: () => router.push("/tools"),
     },
+    {
+      id: "projects",
+      name: "View Projects…",
+      icon: <BriefcaseIcon className="h-4 w-4" />,
+      keywords: "interface color dark light",
+    },
+    {
+      id: "projectsSplit",
+      name: "Split",
+      icon: (
+        <Image
+          src="/static/images/icons/split.png"
+          alt="Split icon"
+          width="18"
+          height="18"
+        />
+      ),
+      perform: () =>
+        window.open(
+          "https://apps.apple.com/gb/app/split-share-the-tab/id1668137581",
+          "_blank"
+        ),
+      parent: "projects",
+      keywords: "project case study work portfolio",
+    },
+    {
+      id: "projectsCodeStash",
+      name: "Code Stash",
+      icon: (
+        <Image
+          src="/static/images/icons/code-stash.png"
+          alt="Code Stash icon"
+          width="18"
+          height="18"
+        />
+      ),
+      perform: () =>
+        window.open(
+          "https://www.raycast.com/ben-greenwood/code-stash",
+          "_blank"
+        ),
+      parent: "projects",
+      keywords: "project case study work portfolio",
+    },
+    // {
+    //   id: "projectsAklimate",
+    //   name: "Aklimate",
+    //   icon: <PencilIcon className="h-4 w-4" />,
+    //   perform: () => router.push("/tools"),
+    //   parent: "projects",
+    //   keywords: "project case study work portfolio",
+    // },
+    // {
+    //   id: "projectsAH",
+    //   name: "Appear [Here]",
+    //   icon: <PencilIcon className="h-4 w-4" />,
+    //   perform: () => router.push("/tools"),
+    //   parent: "projects",
+    //   keywords: "project case study work portfolio AH",
+    // },
+    // {
+    //   id: "projectsMMTM",
+    //   name: "mmtm",
+    //   icon: <PencilIcon className="h-4 w-4" />,
+    //   perform: () => router.push("/tools"),
+    //   parent: "projects",
+    //   keywords: "project case study work portfolio",
+    // },
     {
       id: "theme",
       name: "Change theme…",

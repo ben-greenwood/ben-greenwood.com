@@ -6,7 +6,7 @@ function CommandBarResults() {
   const { results, rootActionId } = useMatches()
 
   return (
-    <div className="bg-white ">
+    <div className="my-2">
       <KBarResults
         items={results}
         onRender={({ item, active }) =>
