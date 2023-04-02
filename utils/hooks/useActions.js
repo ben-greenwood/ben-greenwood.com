@@ -140,7 +140,7 @@ export default function useWindowSize() {
       name: "Twitter",
       keywords: "social",
       icon: <TwitterIcon className="h-4 w-4 text-black" />,
-      perform: () => window.open("https://twitter.com/_beanacre", "_blank"),
+      perform: () => window.open("https://twitter.com/bengreenwood", "_blank"),
     },
     {
       id: "mastodon",
