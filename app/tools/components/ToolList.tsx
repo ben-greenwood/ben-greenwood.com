@@ -16,7 +16,7 @@ type Props = {
 const ToolList = ({ title, tools, className }: Props) => {
   return (
     <div className={className}>
-      <h4 className="font-magnat inline border-b border-black pb-1 text-sm font-medium text-black dark:border-slate-300 dark:text-slate-200">
+      <h4 className="inline border-b border-black pb-1 font-magnat text-sm font-medium text-black dark:border-slate-300 dark:text-slate-200">
         {title}
       </h4>
       <div className="mt-4 grid gap-x-8 sm:grid-cols-2">

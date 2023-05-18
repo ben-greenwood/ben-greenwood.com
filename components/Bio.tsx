@@ -43,7 +43,7 @@ const Bio = () => {
         // onClick={query.toggle}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="group default-transition group text-sm relative mt-10 flex items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white px-4 py-2 hover:border-slate-300 dark:border-slate-700 dark:bg-black dark:hover:border-slate-700 "
+        className="default-transition group group relative mt-10 flex items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm hover:border-slate-300 dark:border-slate-700 dark:bg-black dark:hover:border-slate-700 "
       >
         {hovered && <BinaryAnimation className="absolute" />}
         <div className="relative z-10">
