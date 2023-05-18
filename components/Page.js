@@ -13,7 +13,7 @@ const Page = ({ head, children }) => {
         <CommandBarToggle />
       </div>
       <div className="relative isolate min-h-screen overflow-hidden bg-white dark:bg-black">
-        <div className="bg-noisy pointer-events-none absolute inset-0 z-10 rounded-xl md:rounded-2xl lg:rounded-3xl"></div>
+        <div className="bg-noisy pointer-events-none absolute inset-0 z-10"></div>
         <BackgroundGrid />
         <div className="default-transition relative h-full w-full ">
           <Head>
