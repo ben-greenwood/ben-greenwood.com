@@ -25,7 +25,7 @@ const Tool = ({ link, title, icon, tag }: Props) => {
         alt="raycast"
         className="overflow-hidden rounded-md object-cover object-center"
       />
-      <h3 className="ml-4 max-w-[45%] truncate text-sm text-slate-700 dark:text-slate-300 sm:max-w-none">
+      <h3 className="ml-2 max-w-[45%] truncate text-sm text-slate-700 dark:text-slate-300 sm:max-w-none">
         {title}
       </h3>
       {tag && (

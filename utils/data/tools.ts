@@ -1,4 +1,4 @@
-type Tool = {
+export type Tool = {
   link: string
   title: string
   tag: string

@@ -1,4 +1,4 @@
-import Bio from "@/components/Home/Bio"
+import Bio from "@/components/Bio"
 import Header from "@/components/Header"
 
 export default function Home() {
