@@ -74,8 +74,8 @@ export default function RootLayout({
     <html lang="en" className={cx(magnat.variable, swear.variable)}>
       <body className={cx(inter.className, "dark")}>
         <div className="relative isolate min-h-screen overflow-hidden bg-white dark:bg-black">
-          <div className="fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8 z-50">
-            <div className="pointer-events-auto flex items-center justify-between gap-x-6 bg-slate-900 dark:bg-white px-6 py-2.5 sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5">
+          <div className="fixed inset-x-0 bottom-0 z-50 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
+            <div className="pointer-events-auto flex items-center justify-between gap-x-6 bg-slate-900 px-6 py-2.5 dark:bg-white sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5">
               <p className="text-sm leading-6 text-white dark:text-slate-800">
                 <a href="mailto:ben.t.greenwood@gmail.com">
                   <strong className="font-semibold">

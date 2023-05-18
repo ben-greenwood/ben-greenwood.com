@@ -41,7 +41,7 @@ a {
 }
 
 .raycast [cmdk-root] {
-  @apply max-w-2xl w-full rounded-xl py-2 shadow-lg border border-slate-700 relative mx-auto bg-gradient-to-b from-[#141522]/95 to-[#000000]/95;
+  @apply relative mx-auto w-full max-w-2xl rounded-xl border border-slate-700 bg-gradient-to-b from-[#141522]/95 to-[#000000]/95 py-2 shadow-lg;
 }
 
 .raycast [cmdk-root]:before {
@@ -58,7 +58,7 @@ a {
 }
 
 .raycast [cmdk-input] {
-  @apply w-full border-0 text-[15px] text-white px-4 py-2 outline-none bg-[var(--bg)];
+  @apply w-full border-0 bg-[var(--bg)] px-4 py-2 text-[15px] text-white outline-none;
 }
 
 .raycast [cmdk-input]::placeholder {
@@ -81,7 +81,7 @@ a {
 }
 
 [cmdk-item] {
-  @apply text-gray-100 cursor-pointer rounded-md text-sm flex items-center px-2 h-10;
+  @apply flex h-10 cursor-pointer items-center rounded-md px-2 text-sm text-gray-100;
   content-visibility: auto;
   gap: 8px;
   user-select: none;
@@ -113,7 +113,7 @@ a {
 }
 
 [cmdk-raycast-meta] {
-  @apply ml-auto text-gray-500 text-xs;
+  @apply ml-auto text-xs text-gray-500;
 }
 
 [cmdk-list] {
@@ -132,13 +132,13 @@ a {
 }
 
 [cmdk-group-heading] {
-  @apply text-xs text-slate-500 flex items-center;
+  @apply flex items-center text-xs text-slate-500;
   user-select: none;
   padding: 0 8px;
 }
 
 [cmdk-raycast-footer] {
-  @apply flex items-center absolute bottom-0 rounded-b-xl w-full h-10 bg-black p-2 border-t border-gray-700;
+  @apply absolute bottom-0 flex h-10 w-full items-center rounded-b-xl border-t border-gray-700 bg-black p-2;
 }
 
 [cmdk-raycast-footer] svg {
@@ -149,7 +149,7 @@ a {
 }
 
 [cmdk-empty] {
-  @apply text-sm flex items-center justify-center h-20 whitespace-pre-wrap text-gray-500;
+  @apply flex h-20 items-center justify-center whitespace-pre-wrap text-sm text-gray-500;
 }
 
 @keyframes loading {
