@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Magnat Text";
+  src: local("Magnat Text Regular"), local("Magnat-Text-Regular"),
+    url("../fonts/Magnat-TextRegular.woff2") format("woff2"),
+    url("../fonts/Magnat-TextRegular.woff") format("woff"),
+    url("../fonts/Magnat-TextRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Magnat Head";
+  src: local("Magnat Text SemiBold"), local("Magnat-Text-SemiBold"),
+    url("../fonts/Magnat-TextSemiBold.woff2") format("woff2"),
+    url("../fonts/Magnat-TextSemiBold.woff") format("woff"),
+    url("../fonts/Magnat-TextSemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Swear Black Cilati";
+  src: local("Swear Black Cilati"),
+    url("../fonts/Swear-BlackCilati.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Satoshi-Variable";
+  src: url("../fonts/Satoshi-Variable.woff2") format("woff2"),
+    url("../fonts/Satoshi-Variable.woff") format("woff"),
+    url("../fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+} */

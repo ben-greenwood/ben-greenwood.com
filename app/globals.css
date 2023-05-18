@@ -1,27 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", Helvetica Neue, -apple-system, BlinkMacSystemFont,
+    Fira Sans, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+::selection {
+  background: #a7f3d0; /* WebKit/Blink Browsers */
+}
+
+.dark ::selection {
+  background: #4f46e5; /* WebKit/Blink Browsers */
+}
+
+a {
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.magnat-head {
+  font-family: "Magnat Head", serif;
+}
+
+.magnat-text {
+  font-family: "Magnat Text", serif;
+}
+
+.font-swear {
+  font-family: "Swear Black Cilati";
+}
+
+.handwriting {
+  font-family: "Indie Flower";
+  font-weight: 600;
+}
+
+.wavy {
+  text-decoration-style: wavy;
+}
+
+.default-transition {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.animate-pulse {
+  animation: pulse 5s cubic-bezier(0.4, 0, 0.6, 0) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.typed-cursor {
+  @apply text-black dark:text-white;
+}
+
+.bg-noisy {
+  background-image: url("../images/noise.png");
+  background-repeat: repeat;
+  background-size: 182px;
+  opacity: 0.03;
 }
