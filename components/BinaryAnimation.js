@@ -9,7 +9,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: -16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/20"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/20"
       >
         01010
       </motion.div>
@@ -17,7 +17,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: 16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/40"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/40"
       >
         10101
       </motion.div>
@@ -25,7 +25,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: -16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/30"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/30"
       >
         01010
       </motion.div>
@@ -33,7 +33,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: 16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/20"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/20"
       >
         10101
       </motion.div>
@@ -41,7 +41,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: -16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/20"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/20"
       >
         01010
       </motion.div>
@@ -49,7 +49,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: 16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/10"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/10"
       >
         10101
       </motion.div>
@@ -57,7 +57,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: -16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/20"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/20"
       >
         01010
       </motion.div>
@@ -65,7 +65,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: 16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/30"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/30"
       >
         10101
       </motion.div>
@@ -73,7 +73,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: -16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/40"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/40"
       >
         01010
       </motion.div>
@@ -81,7 +81,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: 16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/10"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/10"
       >
         10101
       </motion.div>
@@ -89,7 +89,7 @@ export default function BinaryAnimation({ className }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: -16 }}
         transition={{ duration: 0.5 }}
-        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-500/30"
+        className="w-[14px] break-words text-center text-xs tabular-nums text-indigo-400/30"
       >
         01010
       </motion.div>

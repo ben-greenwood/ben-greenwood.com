@@ -40,15 +40,15 @@ const Bio = () => {
         onClick={query.toggle}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="group default-transition group relative mt-10 flex items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white px-4 py-2 hover:border-slate-300 dark:border-slate-800 dark:bg-black dark:hover:border-slate-700 "
+        className="group default-transition group text-sm relative mt-10 flex items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white px-4 py-2 hover:border-slate-300 dark:border-slate-700 dark:bg-black dark:hover:border-slate-700 "
       >
         {hovered && <BinaryAnimation className="absolute" />}
         <div className="relative z-10">
           Use{" "}
-          <kbd className="rounded bg-slate-100 p-1 px-2 text-sm transition-all duration-500 group-hover:bg-slate-200 dark:bg-slate-900 dark:group-hover:bg-slate-700">
+          <kbd className="rounded bg-slate-100 p-1 px-2 text-xs transition-all duration-500 group-hover:bg-slate-200 dark:bg-slate-900 dark:group-hover:bg-slate-700">
             ⌘
           </kbd>{" "}
-          <kbd className="rounded bg-slate-100 p-1 px-2 text-sm transition-all duration-500 group-hover:bg-slate-200 dark:bg-slate-900 dark:group-hover:bg-slate-700">
+          <kbd className="rounded bg-slate-100 p-1 px-2 text-xs transition-all duration-500 group-hover:bg-slate-200 dark:bg-slate-900 dark:group-hover:bg-slate-700">
             K
           </kbd>{" "}
           to browse →
