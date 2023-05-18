@@ -13,8 +13,8 @@ const Bio = () => {
   return (
     <div className="max-w-none font-normal text-slate-600 dark:text-slate-200">
       <p>
-        I’m a <em className="magnat-text">Product Designer</em> and{" "}
-        <em className="magnat-text">Full Stack Engineer</em> who enjoys tackling
+        I’m a <em className="font-magnat">Product Designer</em> and{" "}
+        <em className="font-magnat">Full Stack Engineer</em> who enjoys tackling
         problems with a focus on simplicity, usability, and responsiveness.
       </p>
       <div className="mt-10">
@@ -23,7 +23,7 @@ const Bio = () => {
         </h5>
         <hr className="mt-2 w-6 border-indigo-600" />
         <p className="mt-4">
-          <em className="magnat-text">Senior Product Engineer</em> at{" "}
+          <em className="font-magnat">Senior Product Engineer</em> at{" "}
           <ExternalLink url="https://www.getaklimate.com" text="Aklimate" />, an
           early stage startup{" "}
           <ExternalLink

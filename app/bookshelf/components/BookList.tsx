@@ -11,7 +11,7 @@ type Props = {
 const BookList = ({ title, books, current = false }: Props) => {
   return (
     <div className="mt-6">
-      <h4 className="magnat-text inline border-b border-black pb-1 text-sm font-medium text-black dark:border-slate-300 dark:text-slate-200">
+      <h4 className="font-magnat inline border-b border-black pb-1 text-sm font-medium text-black dark:border-slate-300 dark:text-slate-200">
         {title}
       </h4>
       <div className="mt-4">

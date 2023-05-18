@@ -1,11 +1,25 @@
 import "./globals.css"
-import "@/public/css/font.css"
 
 import { Analytics } from "@vercel/analytics/react"
 import BackgroundGrid from "@/components/BackgroundGrid"
 import { Inter } from "next/font/google"
 import { Metadata } from "next"
 import cx from "classnames"
+import localFont from "next/font/local"
+
+const magnat = localFont({
+  src: "../public/fonts/magnat-text-regular.woff2",
+  weight: "400",
+  variable: "--font-magnat-text",
+  display: "swap",
+})
+
+const swear = localFont({
+  src: "../public/fonts/swear-black-cilati.ttf",
+  weight: "900",
+  variable: "--font-swear-cilati",
+  display: "swap",
+})
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -56,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={cx(magnat.variable, swear.variable)}>
       <body className={cx(inter.className, "dark")}>
         <div className="relative isolate min-h-screen overflow-hidden bg-white dark:bg-black">
           <div className="fixed inset-x-0 bottom-0 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8 z-50">

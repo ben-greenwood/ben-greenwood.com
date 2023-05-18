@@ -29,49 +29,8 @@ a {
   box-sizing: border-box;
 }
 
-.magnat-head {
-  font-family: "Magnat Head", serif;
-}
-
-.magnat-text {
-  font-family: "Magnat Text", serif;
-}
-
-.font-swear {
-  font-family: "Swear Black Cilati";
-}
-
-.handwriting {
-  font-family: "Indie Flower";
-  font-weight: 600;
-}
-
-.wavy {
-  text-decoration-style: wavy;
-}
-
 .default-transition {
   @apply transition-all duration-300 ease-in-out;
-}
-
-.animate-pulse {
-  animation: pulse 5s cubic-bezier(0.4, 0, 0.6, 0) infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-.typed-cursor {
-  @apply text-black dark:text-white;
 }
 
 .bg-noisy {
