@@ -7,16 +7,18 @@ import {
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/solid"
 import { DribbbleIcon, GitHubIcon, TwitterIcon } from "@/components/Icons"
-import React, { useEffect, useRef, useState } from "react"
+import React, { useContext, useEffect, useRef, useState } from "react"
 
 import { Command } from "cmdk"
+import { CommandMenuContext } from "@/utils/contexts/CommandMenuContext"
 import Image from "next/image"
 import cx from "classnames"
 import { useRouter } from "next/navigation"
 
 export function CommandMenu() {
+  const { isOpen, open, close } = useContext(CommandMenuContext)
+
   const router = useRouter()
-  const [open, setOpen] = useState(false)
   const [value, setValue] = useState("")
 
   const inputRef = useRef<HTMLInputElement | null>(null)
@@ -24,13 +26,13 @@ export function CommandMenu() {
   const containerRef = useRef<any>(null)
 
   useEffect(() => {
-    if (open) {
+    if (isOpen) {
       inputRef.current?.focus()
       document.getElementById("main")?.classList.add("blur-bg")
     } else {
       document.getElementById("main")?.classList.remove("blur-bg")
     }
-  }, [open])
+  }, [isOpen])
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
@@ -38,7 +40,7 @@ export function CommandMenu() {
         return
       }
 
-      setOpen(false)
+      close()
     }
 
     document.addEventListener("mousedown", handleClickOutside)
@@ -52,11 +54,16 @@ export function CommandMenu() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "k" && e.metaKey) {
         e.preventDefault()
-        setOpen((o) => !o)
+
+        if (isOpen) {
+          return close()
+        }
+
+        open()
       }
 
       if (e.key === "Escape") {
-        setOpen(false)
+        close()
       }
     }
 
@@ -65,26 +72,29 @@ export function CommandMenu() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown)
     }
-  }, [])
+  }, [isOpen])
 
   const handleRedirect = (href: string) => {
     router.push(href)
-    setOpen(false)
+    close()
   }
 
   const handleOutsideRedirect = (href: string) => {
     window.open(href, "_blank")
-    setOpen(false)
+    close()
   }
 
   return (
     <div
-      ref={containerRef}
       className={cx("raycast absolute bottom-0 z-50 w-full sm:top-32", {
-        hidden: !open,
+        hidden: !isOpen,
       })}
     >
-      <Command value={value} onValueChange={(v) => setValue(v)}>
+      <Command
+        value={value}
+        onValueChange={(v) => setValue(v)}
+        ref={containerRef}
+      >
         <Command.Input
           ref={inputRef}
           autoFocus

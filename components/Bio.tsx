@@ -1,11 +1,13 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 
 import BinaryAnimation from "@/components/BinaryAnimation"
+import { CommandMenuContext } from "@/utils/contexts/CommandMenuContext"
 import ExternalLink from "@/components/ExternalLink"
 
 const Bio = () => {
+  const { open: openCommandMenu } = useContext(CommandMenuContext)
   const [hovered, setHovered] = useState(false)
 
   return (
@@ -38,7 +40,7 @@ const Bio = () => {
       </div>
 
       <button
-        // onClick={query.toggle}
+        onClick={() => openCommandMenu()}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         className="default-transition group group relative mt-10 flex items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white px-4 py-2 text-sm hover:border-slate-300 dark:border-slate-700 dark:bg-black dark:hover:border-slate-700 "
