@@ -4,7 +4,7 @@ import {
   BookOpenIcon,
   HomeIcon,
   Square3Stack3DIcon,
-  SwatchIcon,
+  WrenchScrewdriverIcon,
 } from "@heroicons/react/24/solid"
 import { DribbbleIcon, GitHubIcon, TwitterIcon } from "@/components/Icons"
 import React, { useEffect, useRef, useState } from "react"
@@ -104,7 +104,7 @@ export function CommandMenu() {
               Bookshelf
             </Item>
             <Item value="Tool Kit" onSelect={() => handleRedirect("/tools")}>
-              <SwatchIcon className="h-4 w-4" />
+              <WrenchScrewdriverIcon className="h-4 w-4" />
               Tool Kit
             </Item>
           </Command.Group>
