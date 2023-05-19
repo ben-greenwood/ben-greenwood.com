@@ -26,6 +26,7 @@ const swear = localFont({
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://beanacre.xyz"),
   title: {
     default: "Ben Greenwood",
     template: "%s | Ben Greenwood",

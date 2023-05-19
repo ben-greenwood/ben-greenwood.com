@@ -48,7 +48,7 @@ export function CommandMenu() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
     }
-  }, [])
+  }, [close])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -72,7 +72,7 @@ export function CommandMenu() {
     return () => {
       window.removeEventListener("keydown", handleKeyDown)
     }
-  }, [isOpen])
+  }, [isOpen, open, close])
 
   const handleRedirect = (href: string) => {
     router.push(href)
