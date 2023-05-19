@@ -2,6 +2,7 @@ import "./globals.css"
 
 import { Analytics } from "@vercel/analytics/react"
 import BackgroundGrid from "@/components/BackgroundGrid"
+import { CommandMenu } from "@/components/CommandMenu"
 import { Inter } from "next/font/google"
 import { Metadata } from "next"
 import cx from "classnames"
@@ -102,6 +103,7 @@ export default function RootLayout({
               <div className="min-h-screen w-full items-center py-12 sm:flex">
                 <main className="w-full px-6 py-6 lg:py-16">{children}</main>
                 <Analytics />
+                <CommandMenu />
               </div>
             </div>
           </div>
