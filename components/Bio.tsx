@@ -18,9 +18,9 @@ const Bio = () => {
         problems with a focus on simplicity, usability, and responsiveness.
       </p>
       <div className="mt-10">
-        <h5 className="text-sm font-medium text-slate-500 dark:text-slate-300">
+        <span className="text-sm font-medium text-slate-500 dark:text-slate-300">
           Currently
-        </h5>
+        </span>
         <hr className="mt-2 w-6 border-indigo-600" />
         <p className="mt-4">
           <em className="font-magnat">Senior Product Engineer</em> at{" "}

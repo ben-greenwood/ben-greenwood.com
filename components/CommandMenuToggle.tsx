@@ -19,6 +19,7 @@ const CommandMenuToggle = () => {
       onClick={handleClick}
       className="rounded-lg border border-slate-200 bg-white p-2 text-base text-black hover:bg-slate-100 dark:border-slate-800 dark:bg-black dark:text-white dark:hover:bg-slate-900"
     >
+      <span className="sr-only">Open menu</span>
       {!isOpen ? (
         <Bars3Icon className="h-5 w-5 stroke-2 text-white" />
       ) : (
