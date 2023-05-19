@@ -101,7 +101,9 @@ export default function RootLayout({
           <div className="default-transition relative h-full w-full ">
             <div className="relative mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-between">
               <div className="min-h-screen w-full items-center py-12 sm:flex">
-                <main className="w-full px-6 py-6 lg:py-16">{children}</main>
+                <main id="main" className="w-full px-6 py-6 lg:py-16">
+                  {children}
+                </main>
                 <Analytics />
                 <CommandMenu />
               </div>
