@@ -4,6 +4,7 @@ import { Analytics } from "@vercel/analytics/react"
 import BackgroundGrid from "@/components/BackgroundGrid"
 import { CommandMenu } from "@/components/CommandMenu"
 import { CommandMenuProvider } from "@/utils/contexts/CommandMenuContext"
+import CommandMenuToggle from "@/components/CommandMenuToggle"
 import { Inter } from "next/font/google"
 import { Metadata } from "next"
 import cx from "classnames"
@@ -76,6 +77,9 @@ export default function RootLayout({
     <CommandMenuProvider>
       <html lang="en" className={cx(magnat.variable, swear.variable)}>
         <body className={cx(inter.className, "dark")}>
+          <div className="absolute right-5 top-10 z-20 flex space-x-2 md:top-5">
+            <CommandMenuToggle />
+          </div>
           <div className="relative isolate min-h-screen overflow-hidden bg-white dark:bg-black">
             <div className="fixed inset-x-0 bottom-0 z-50 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
               <div className="pointer-events-auto flex items-center justify-between gap-x-6 bg-slate-900 px-6 py-2.5 dark:bg-white sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5">

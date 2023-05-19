@@ -22,7 +22,7 @@ const Tool = ({ link, title, icon, tag }: Props) => {
         height="24"
         width="24"
         src={`/images/icons/${icon}.png`}
-        alt="raycast"
+        alt={title}
         className="overflow-hidden rounded-md object-cover object-center"
       />
       <h3 className="ml-2 max-w-[45%] truncate text-sm text-slate-700 dark:text-slate-300 sm:max-w-none">
