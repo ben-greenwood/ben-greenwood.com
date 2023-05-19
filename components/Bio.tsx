@@ -2,12 +2,10 @@
 
 import React, { useState } from "react"
 
-// import { useKBar } from "kbar"
 import BinaryAnimation from "@/components/BinaryAnimation"
 import ExternalLink from "@/components/ExternalLink"
 
 const Bio = () => {
-  // const { query } = useKBar()
   const [hovered, setHovered] = useState(false)
 
   return (
