@@ -5,6 +5,7 @@ import BackgroundGrid from "@/components/BackgroundGrid"
 import { CommandMenu } from "@/components/CommandMenu"
 import { CommandMenuProvider } from "@/utils/contexts/CommandMenuContext"
 import CommandMenuToggle from "@/components/CommandMenuToggle"
+import FreelanceBanner from "@/components/FreelanceBanner"
 import { Inter } from "next/font/google"
 import { Metadata } from "next"
 import cx from "classnames"
@@ -81,28 +82,7 @@ export default function RootLayout({
             <CommandMenuToggle />
           </div>
           <div className="relative isolate min-h-screen overflow-hidden bg-white dark:bg-black">
-            <div className="fixed inset-x-0 bottom-0 z-50 sm:flex sm:justify-center sm:px-6 sm:pb-5 lg:px-8">
-              <div className="pointer-events-auto flex items-center justify-between gap-x-6 bg-slate-900 px-6 py-2.5 dark:bg-white sm:rounded-xl sm:py-3 sm:pl-4 sm:pr-3.5">
-                <p className="text-sm leading-6 text-white dark:text-slate-800">
-                  <a href="mailto:ben.t.greenwood@gmail.com">
-                    <strong className="font-semibold">
-                      Available for Freelance Work
-                    </strong>
-                    <svg
-                      viewBox="0 0 2 2"
-                      className="mx-2 inline h-0.5 w-0.5 fill-current"
-                      aria-hidden="true"
-                    >
-                      <circle cx={1} cy={1} r={1} />
-                    </svg>
-                    Drop me a line to discuss availability&nbsp;
-                    <span aria-hidden="true" className="ml-1">
-                      &rarr;
-                    </span>
-                  </a>
-                </p>
-              </div>
-            </div>
+            <FreelanceBanner />
             <div className="bg-noisy pointer-events-none absolute inset-0 z-10"></div>
             <BackgroundGrid />
             <div className="default-transition relative h-full w-full ">
