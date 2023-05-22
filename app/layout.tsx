@@ -76,7 +76,7 @@ export default function RootLayout({
   return (
     <CommandMenuProvider>
       <html lang="en" className={cx(magnat.variable, swear.variable)}>
-        <body className={cx(inter.className, "dark")}>
+        <body className={cx(inter.className, "dark bg-black")}>
           <div className="absolute right-5 top-10 z-20 flex space-x-2 md:top-5">
             <CommandMenuToggle />
           </div>
