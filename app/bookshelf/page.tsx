@@ -1,7 +1,7 @@
-import { getCurrentBooksFromOku, getFavBooksFromOku } from "@/lib/oku"
+import { getCurrentBooksFromOku, getFavBooksFromOku } from "@/app/_lib/oku"
 
-import BookList from "./components/BookList"
-import Header from "@/components/Header"
+import BookList from "./_components/BookList"
+import Header from "@/app/_components/Header"
 import { Metadata } from "next"
 import React from "react"
 

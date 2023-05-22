@@ -6,11 +6,11 @@ import {
   Square3Stack3DIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/solid"
-import { DribbbleIcon, GitHubIcon, TwitterIcon } from "@/components/Icons"
+import { DribbbleIcon, GitHubIcon, TwitterIcon } from "@/app/_components/Icons"
 import React, { useContext, useEffect, useRef, useState } from "react"
 
 import { Command } from "cmdk"
-import { CommandMenuContext } from "@/utils/contexts/CommandMenuContext"
+import { CommandMenuContext } from "@/app/_utils/contexts/CommandMenuContext"
 import Image from "next/image"
 import cx from "classnames"
 import { useRouter } from "next/navigation"

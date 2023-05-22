@@ -2,9 +2,9 @@
 
 import React, { useContext, useState } from "react"
 
-import BinaryAnimation from "@/components/BinaryAnimation"
-import { CommandMenuContext } from "@/utils/contexts/CommandMenuContext"
-import ExternalLink from "@/components/ExternalLink"
+import BinaryAnimation from "@/app/_components/BinaryAnimation"
+import { CommandMenuContext } from "@/app/_utils/contexts/CommandMenuContext"
+import ExternalLink from "@/app/_components/ExternalLink"
 
 const Bio = () => {
   const { open: openCommandMenu } = useContext(CommandMenuContext)

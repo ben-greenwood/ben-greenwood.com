@@ -3,7 +3,7 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline"
 import React, { useContext } from "react"
 
-import { CommandMenuContext } from "@/utils/contexts/CommandMenuContext"
+import { CommandMenuContext } from "@/app/_utils/contexts/CommandMenuContext"
 
 const CommandMenuToggle = () => {
   const { isOpen, open: openCommandMenu } = useContext(CommandMenuContext)

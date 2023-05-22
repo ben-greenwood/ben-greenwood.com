@@ -1,5 +1,5 @@
-import Bio from "@/components/Bio"
-import Header from "@/components/Header"
+import Bio from "@/app/_components/Bio"
+import Header from "@/app/_components/Header"
 
 export default function Home() {
   return (

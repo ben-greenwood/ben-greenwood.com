@@ -1,6 +1,6 @@
 import React from "react"
 import Tool from "./Tool"
-import { Tool as ToolType } from "@/utils/data/tools"
+import { Tool as ToolType } from "@/app/_utils/data/tools"
 
 export const metadata = {
   title: "Ben Greenwood - Tool Kit",

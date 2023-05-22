@@ -1,5 +1,5 @@
 import Book from "./Book"
-import { Book as BookType } from "@/lib/oku"
+import { Book as BookType } from "@/app/_lib/oku"
 import React from "react"
 
 type Props = {
