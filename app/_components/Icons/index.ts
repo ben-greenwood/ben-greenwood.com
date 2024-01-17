@@ -1,3 +1,5 @@
-export { default as TwitterIcon } from "./TwitterIcon"
+export { default as XIcon } from "./XIcon"
 export { default as GitHubIcon } from "./GitHubIcon"
 export { default as DribbbleIcon } from "./DribbbleIcon"
+export { default as LinkedInIcon } from "./LinkedInIcon"
+export { default as ThreadsIcon } from "./ThreadsIcon"

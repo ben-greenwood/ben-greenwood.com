@@ -6,7 +6,13 @@ import {
   Square3Stack3DIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/solid"
-import { DribbbleIcon, GitHubIcon, TwitterIcon } from "@/app/_components/Icons"
+import {
+  DribbbleIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  ThreadsIcon,
+  XIcon,
+} from "@/app/_components/Icons"
 import React, { useContext, useEffect, useRef, useState } from "react"
 
 import { Command } from "cmdk"
@@ -161,13 +167,23 @@ export function CommandMenu() {
           <Command.Group heading="Social">
             <Item
               isCommand
-              value="Twitter"
+              value="Threads"
               onSelect={() =>
-                handleOutsideRedirect("https://twitter.com/bengreenwood")
+                handleOutsideRedirect("https://www.threads.net/@bengreenw0od")
               }
             >
-              <TwitterIcon className="h-4 w-4" />
-              Twitter
+              <ThreadsIcon className="h-4 w-4 p-[1px]" />
+              Threads
+            </Item>
+            <Item
+              isCommand
+              value="LinkedIn"
+              onSelect={() =>
+                handleOutsideRedirect("https://linkedin.com/in/ben-t-greenwood")
+              }
+            >
+              <LinkedInIcon className="h-4 w-4 p-[1px]" />
+              LinkedIn
             </Item>
             <Item
               isCommand
@@ -178,6 +194,15 @@ export function CommandMenu() {
             >
               <GitHubIcon className="h-4 w-4" />
               GitHub
+            </Item>
+            <Item
+              isCommand
+              value="X"
+              onSelect={() =>
+                handleOutsideRedirect("https://twitter.com/bengreenwood")
+              }
+            >
+              <XIcon className="h-4 w-4 p-[3px]" />X
             </Item>
             <Item
               isCommand
