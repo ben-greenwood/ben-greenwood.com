@@ -1,7 +1,7 @@
 {
   "name": "ben-greenwood",
   "engines": {
-    "node": "21.6.2"
+    "node": "20.x"
   },
   "version": "0.1.0",
   "private": true,
