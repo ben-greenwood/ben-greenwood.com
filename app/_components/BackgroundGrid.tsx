@@ -4,7 +4,7 @@ export default function BackgroundGrid() {
   return (
     <>
       <svg
-        className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:hidden"
+        className="absolute inset-0 -z-10 h-full w-full stroke-slate-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] dark:hidden"
         aria-hidden="true"
       >
         <defs>
@@ -45,7 +45,7 @@ export default function BackgroundGrid() {
         <svg
           x="50%"
           y={-1}
-          className="overflow-visible fill-green-100/50 dark:fill-gray-800/20"
+          className="overflow-visible fill-green-100/50 dark:fill-slate-800/20"
         >
           <path
             d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
@@ -62,7 +62,7 @@ export default function BackgroundGrid() {
       <svg
         viewBox="0 0 1108 632"
         aria-hidden="true"
-        className="absolute top-10 left-[calc(50%-4rem)] -z-10 hidden w-[69.25rem] max-w-none transform-gpu blur-3xl dark:block sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
+        className="absolute left-[calc(50%-4rem)] top-10 -z-10 hidden w-[69.25rem] max-w-none transform-gpu blur-3xl dark:block sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
       >
         <path
           fill="url(#175c433f-44f6-4d59-93f0-c5c51ad5566d)"
