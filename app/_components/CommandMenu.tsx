@@ -3,6 +3,7 @@
 import {
   BookOpenIcon,
   HomeIcon,
+  InboxIcon,
   Square3Stack3DIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/solid"
@@ -113,6 +114,10 @@ export function CommandMenu() {
             <Item value="Home" onSelect={() => handleRedirect("/")}>
               <HomeIcon className="h-4 w-4" />
               Home
+            </Item>
+            <Item value="Posts" onSelect={() => handleRedirect("/posts")}>
+              <InboxIcon className="h-4 w-4" />
+              Posts
             </Item>
             <Item
               value="Bookshelf"
