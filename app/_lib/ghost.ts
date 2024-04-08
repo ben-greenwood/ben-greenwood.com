@@ -30,3 +30,22 @@ export async function getPost(slug: string) {
 
   return res.json()
 }
+
+export async function createSubscriber(email: string) {
+  const res = await fetch(
+    "https://201-created.ghost.io/members/api/send-magic-link/",
+    {
+      method: "POST", // or 'PUT'
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email: email, emailType: "subscribe" }),
+    }
+  )
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch data")
+  }
+
+  return null
+}
