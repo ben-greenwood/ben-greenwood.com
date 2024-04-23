@@ -1,10 +1,5 @@
 "use client"
 
-import {
-  CommandLineIcon,
-  ComputerDesktopIcon,
-  GlobeAsiaAustraliaIcon,
-} from "@heroicons/react/24/outline"
 import React, { useContext, useState } from "react"
 
 import BinaryAnimation from "@/app/_components/BinaryAnimation"
@@ -27,25 +22,16 @@ const Bio = () => {
           Currently
         </span>
         <hr className="mt-2 w-6 border-indigo-600" />
+
         <p className="mt-4">
-          Following the strategic closure of Aklimate, I spent six months
-          travelling across the{" "}
-          <GlobeAsiaAustraliaIcon className="inline h-5 w-5" /> Asia-Pacific
-          region, complemented by{" "}
-          <ComputerDesktopIcon className="inline h-5 w-5" /> freelance work.
-          This experience expanded my cultural perspective and provided an
-          opportunity to deepen my existing{" "}
-          <CommandLineIcon className="inline h-5 w-5" /> technical knowledge.
-        </p>
-        <p className="mt-4">
-          Previously, <em className="font-magnat">Senior Product Engineer</em>{" "}
-          at{" "}
+          <em className="font-magnat">Product Engineer</em> at{" "}
+          <ExternalLink url="https://www.papayadash.com" text="Papaya" />.{" "}
+          Previously,{" "}
           <ExternalLink
             url="https://www.getaklimate.com"
             text="Aklimate (YC W22)"
           />
-          , <ExternalLink url="https://appearhere.co.uk" text="Appear Here" />{" "}
-          and <ExternalLink url="https://mmtm.io" text="mmtm" />.
+          , <ExternalLink url="https://appearhere.co.uk" text="Appear Here" />
         </p>
       </div>
 
