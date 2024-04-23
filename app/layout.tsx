@@ -5,7 +5,6 @@ import BackgroundGrid from "@/app/_components/BackgroundGrid"
 import { CommandMenu } from "@/app/_components/CommandMenu"
 import { CommandMenuProvider } from "@/app/_utils/contexts/CommandMenuContext"
 import CommandMenuToggle from "@/app/_components/CommandMenuToggle"
-import FreelanceBanner from "@/app/_components/FreelanceBanner"
 import { Inter } from "next/font/google"
 import { Metadata } from "next"
 import cx from "classnames"
@@ -82,7 +81,6 @@ export default function RootLayout({
             <CommandMenuToggle />
           </div>
           <div className="relative isolate min-h-screen overflow-hidden bg-white dark:bg-black">
-            <FreelanceBanner />
             <div className="bg-noisy pointer-events-none absolute inset-0 z-10"></div>
             <BackgroundGrid />
             <div className="default-transition relative h-full w-full ">
