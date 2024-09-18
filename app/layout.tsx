@@ -84,9 +84,9 @@ export default function RootLayout({
             <div className="bg-noisy pointer-events-none absolute inset-0 z-10"></div>
             <BackgroundGrid />
             <div className="default-transition relative h-full w-full ">
-              <div className="relative mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-between">
-                <div className="min-h-screen w-full items-center py-12 sm:flex">
-                  <main id="main" className="w-full px-6 py-6 lg:py-16">
+              <div className="relative mx-auto max-w-3xl">
+                <div className="min-h-screen w-full">
+                  <main id="main" className="w-full px-6 py-12 lg:py-32">
                     {children}
                   </main>
                   <Analytics />

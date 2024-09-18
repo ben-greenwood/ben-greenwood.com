@@ -63,11 +63,11 @@ a {
 }
 
 .raycast [cmdk-input]::placeholder {
-  @apply text-gray-500;
+  @apply text-slate-500;
 }
 
 .cmdk-raycast-loader {
-  @apply bg-gray-700;
+  @apply bg-slate-700;
   --loader-color: hsl(0, 0%, 43.9%);
   border: 0;
   width: 100%;
@@ -82,7 +82,7 @@ a {
 }
 
 [cmdk-item] {
-  @apply flex h-10 cursor-pointer items-center rounded-md px-2 text-sm text-gray-100;
+  @apply flex h-10 cursor-pointer items-center rounded-md px-2 text-sm text-slate-100;
   content-visibility: auto;
   gap: 8px;
   user-select: none;
@@ -92,11 +92,11 @@ a {
 }
 
 [cmdk-item][data-selected="true"] {
-  @apply bg-gray-800 text-white;
+  @apply bg-slate-800 text-white;
 }
 
 [cmdk-item]:active {
-  @apply bg-gray-800;
+  @apply bg-slate-800;
   transition-property: background;
 }
 
@@ -114,7 +114,7 @@ a {
 }
 
 [cmdk-raycast-meta] {
-  @apply ml-auto text-xs text-gray-500;
+  @apply ml-auto text-xs text-slate-500;
 }
 
 [cmdk-list] {
@@ -139,7 +139,7 @@ a {
 }
 
 .cmdk-raycast-footer {
-  @apply absolute bottom-0 flex h-10 w-full items-center rounded-b-xl border-t border-gray-700 bg-black p-2;
+  @apply absolute bottom-0 flex h-10 w-full items-center rounded-b-xl border-t border-slate-700 bg-black p-2;
 }
 
 .cmdk-raycast-footer svg {
@@ -150,7 +150,7 @@ a {
 }
 
 [cmdk-empty] {
-  @apply flex h-20 items-center justify-center whitespace-pre-wrap text-sm text-gray-500;
+  @apply flex h-20 items-center justify-center whitespace-pre-wrap text-sm text-slate-500;
 }
 
 @keyframes loading {
@@ -217,4 +217,8 @@ a {
     opacity: 0;
     transform: scale(0.96);
   }
+}
+
+.prose img {
+  @apply mx-auto;
 }
