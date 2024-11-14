@@ -125,7 +125,6 @@ a {
   scroll-padding-block-end: 40px;
   transition: 100ms ease;
   transition-property: height;
-  padding-bottom: 40px;
 }
 
 [cmdk-group] {

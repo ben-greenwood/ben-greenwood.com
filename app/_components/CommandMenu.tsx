@@ -226,16 +226,6 @@ export function CommandMenu() {
             </Item>
           </Command.Group>
         </Command.List>
-
-        <div className="cmdk-raycast-footer">
-          <Image
-            alt="B Logo"
-            src="/images/icons/b.png"
-            className="ml-0.5 h-6 w-6"
-            height={16}
-            width={16}
-          />
-        </div>
       </Command>
     </div>
   )
