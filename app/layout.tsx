@@ -81,7 +81,10 @@ export default function RootLayout({
             <CommandMenuToggle />
           </div>
           <div className="relative isolate min-h-screen overflow-hidden bg-white dark:bg-black">
-            <div className="bg-noisy pointer-events-none absolute inset-0 z-10"></div>
+            <div
+              aria-hidden="true"
+              className="bg-noisy pointer-events-none absolute inset-0 z-10"
+            ></div>
             <BackgroundGrid />
             <div className="default-transition relative h-full w-full ">
               <div className="relative mx-auto flex min-h-screen max-w-3xl flex-col items-center justify-between">
