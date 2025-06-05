@@ -1,0 +1,21 @@
+import Header from "@/app/_components/Header"
+
+export const metadata = {
+  title: "Welcome to my blog",
+  description: "An introduction to the new blog system",
+}
+
+<Header title="Welcome to my blog" />
+
+<article className="prose dark:prose-invert mt-6">
+  <p>
+    This is a simple example post demonstrating the new blogging infrastructure.
+    Future posts can be written by creating a new folder in
+    <code className="break-words">app/blog</code> and adding a <code>page.mdx</code>
+    file.
+  </p>
+  <p>
+    The blog listing page automatically uses the metadata exported from each
+    post so everything stays in sync.
+  </p>
+</article>

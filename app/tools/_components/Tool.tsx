@@ -31,8 +31,8 @@ const Tool = ({ link, title, icon, tag }: Props) => {
       {tag && (
         <span className="ml-2 text-xs font-normal text-slate-400">{tag}</span>
       )}
-      <div className="transistion-all ml-4 flex-grow border-t-2 border-dotted border-slate-200 duration-300 ease-in-out group-hover:border-green-400 dark:border-slate-700"></div>
-      <ArrowRightIcon className="transistion-all ml-2 h-4 w-4 text-slate-300 duration-300 ease-in-out group-hover:translate-x-2 group-hover:text-green-400 dark:text-slate-500" />
+      <div className="transition-all ml-4 flex-grow border-t-2 border-dotted border-slate-200 duration-300 ease-in-out group-hover:border-green-400 dark:border-slate-700"></div>
+      <ArrowRightIcon className="transition-all ml-2 h-4 w-4 text-slate-300 duration-300 ease-in-out group-hover:translate-x-2 group-hover:text-green-400 dark:text-slate-500" />
     </a>
   )
 }
