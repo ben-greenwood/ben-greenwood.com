@@ -1,0 +1,81 @@
+export const metadata = {
+  title: "Getting Started with MDX",
+  description: "Learn how to write blog posts with MDX in Next.js",
+  date: "2024-01-15",
+}
+
+# Getting Started with MDX
+
+MDX is a powerful format that lets you write JSX in your Markdown documents. This makes it perfect for creating rich, interactive blog posts.
+
+## What is MDX?
+
+MDX allows you to use React components directly in your Markdown content. This means you can:
+
+- Write normal Markdown content
+- Import and use React components
+- Create interactive examples
+- Build rich, engaging content
+
+## Writing Your First Post
+
+To create a new blog post, simply:
+
+1. Create a new folder in `app/blog/` with your post slug
+2. Add a `page.mdx` file with your content
+3. Export metadata at the top of the file
+4. Write your content in Markdown
+
+```javascript
+export const metadata = {
+  title: "Your Post Title",
+  description: "A brief description",
+  date: "2024-01-15",
+}
+
+# Your Post Title
+
+Your content goes here...
+```
+
+## Features Available
+
+### Code Highlighting
+
+```typescript
+interface BlogPost {
+  title: string
+  description: string
+  date: string
+  slug: string
+}
+
+const post: BlogPost = {
+  title: "My Post",
+  description: "A great post",
+  date: "2024-01-15",
+  slug: "my-post"
+}
+```
+
+### Lists and Typography
+
+- **Bold text** for emphasis
+- *Italic text* for subtle emphasis
+- `Inline code` for technical terms
+- [Links](https://nextjs.org) that open in new tabs for external URLs
+
+### Blockquotes
+
+> MDX combines the simplicity of Markdown with the power of React components, making it perfect for modern documentation and blogging.
+
+## Next Steps
+
+Try creating your own blog post! The system will automatically:
+
+- Discover your new post
+- Extract the metadata
+- Add it to the blog listing
+- Apply consistent styling
+
+Happy writing! 🎉 
