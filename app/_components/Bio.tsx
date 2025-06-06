@@ -1,13 +1,13 @@
 "use client"
 
-import React, { useContext, useState } from "react"
+import React, { useState } from "react"
 
 import BinaryAnimation from "@/app/_components/BinaryAnimation"
-import { CommandMenuContext } from "@/app/_utils/contexts/CommandMenuContext"
+import { useCommandMenu } from "@/app/_utils/contexts/CommandMenuContext"
 import ExternalLink from "@/app/_components/ExternalLink"
 
 const Bio = () => {
-  const { open: openCommandMenu } = useContext(CommandMenuContext)
+  const { open: openCommandMenu } = useCommandMenu()
   const [hovered, setHovered] = useState(false)
 
   return (

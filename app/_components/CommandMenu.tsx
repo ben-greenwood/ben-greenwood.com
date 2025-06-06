@@ -2,6 +2,7 @@
 
 import {
   BookOpenIcon,
+  DocumentTextIcon,
   HomeIcon,
   Square3Stack3DIcon,
   WrenchScrewdriverIcon,
@@ -13,16 +14,21 @@ import {
   ThreadsIcon,
   XIcon,
 } from "@/app/_components/Icons"
-import React, { useContext, useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 
 import { Command } from "cmdk"
-import { CommandMenuContext } from "@/app/_utils/contexts/CommandMenuContext"
+import { useCommandMenu } from "@/app/_utils/contexts/CommandMenuContext"
 import Image from "next/image"
 import cx from "classnames"
 import { useRouter } from "next/navigation"
+import { type Post } from "@/app/posts/utils"
 
-export function CommandMenu() {
-  const { isOpen, open, close } = useContext(CommandMenuContext)
+interface CommandMenuProps {
+  posts: Post[]
+}
+
+export function CommandMenu({ posts }: CommandMenuProps) {
+  const { isOpen, open, close } = useCommandMenu()
 
   const router = useRouter()
   const [value, setValue] = useState("")
@@ -126,6 +132,20 @@ export function CommandMenu() {
               Tool Kit
             </Item>
           </Command.Group>
+          {posts.length > 0 && (
+            <Command.Group heading="Posts">
+              {posts.map((post) => (
+                <Item
+                  key={post.slug}
+                  value={post.title}
+                  onSelect={() => handleRedirect(`/posts/${post.slug}`)}
+                >
+                  <DocumentTextIcon className="h-4 w-4" />
+                  {post.title}
+                </Item>
+              ))}
+            </Command.Group>
+          )}
           <Command.Group heading="Projects">
             <Item
               isCommand

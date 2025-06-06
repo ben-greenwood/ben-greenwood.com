@@ -1,16 +1,26 @@
 "use client"
 
-import React, { createContext, useCallback, useContext, useState } from "react"
+import React, { createContext, useCallback, useContext, useState, ReactNode } from "react"
 
-export const CommandMenuContext = createContext({
-  isOpen: true,
+interface CommandMenuContextType {
+  isOpen: boolean
+  open: () => void
+  close: () => void
+}
+
+export const CommandMenuContext = createContext<CommandMenuContextType>({
+  isOpen: false,
   open: () => {},
   close: () => {},
 })
 
 export const useCommandMenu = () => useContext(CommandMenuContext)
 
-export const CommandMenuProvider = ({ children }: { children: any }) => {
+interface CommandMenuProviderProps {
+  children: ReactNode
+}
+
+export const CommandMenuProvider = ({ children }: CommandMenuProviderProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const open = useCallback(() => setIsOpen(true), [])
