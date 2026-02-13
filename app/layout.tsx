@@ -9,6 +9,7 @@ import { Inter } from "next/font/google"
 import { Metadata } from "next"
 import cx from "classnames"
 import localFont from "next/font/local"
+import { getPosts } from "@/app/posts/utils"
 
 const magnat = localFont({
   src: "../public/fonts/magnat-text-regular.woff2",
@@ -68,11 +69,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const posts = await getPosts()
+
   return (
     <CommandMenuProvider>
       <html lang="en" className={cx(magnat.variable, swear.variable)}>
@@ -93,7 +96,7 @@ export default function RootLayout({
                     {children}
                   </main>
                   <Analytics />
-                  <CommandMenu />
+                  <CommandMenu posts={posts} />
                 </div>
               </div>
             </div>
